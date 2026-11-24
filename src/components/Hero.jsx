@@ -6,28 +6,26 @@ export default function Hero({ onStartLearn, onExploreStories }) {
     sounds.speak("Etepe, mai katu! Bienvenidos a Ikua", "[e-te-pe mai ka-tu bi-en-ve-ni-dos a i-kwa]");
   };
 
+  const tickerPhrases = [
+    { kokama: "Uni tsupi ore rekove", spanish: "El agua pura es nuestra vida", phonetic: "[u-ni tsu-pi o-re re-ko-ve]" },
+    { kokama: "Yawar pua ka'a pe", spanish: "El jaguar camina en el bosque", phonetic: "[ya-war pu-a ka-a pe]" },
+    { kokama: "Kukama ikua", spanish: "Sabiduría viva del pueblo", phonetic: "[ku-ka-ma i-kwa]" },
+    { kokama: "Kuarachy ohesape parana", spanish: "El sol ilumina el gran río", phonetic: "[kwa-ra-chy o-he-sa-pe pa-ra-na]" },
+    { kokama: "Irapatse tupan", spanish: "Gratitud profunda a la vida", phonetic: "[i-ra-pat-se tu-pan]" }
+  ];
+
   return (
     <section id="inicio" className="hero-section">
-      {/* Background with Amazonian visual texture and gentle gradients */}
-      <div className="hero-bg-overlay"></div>
+      {/* Dynamic Background Canopy Texture & Ambient Glows */}
+      <div className="hero-ambient-glow glow-left"></div>
+      <div className="hero-ambient-glow glow-right"></div>
       
-      {/* Decorative Amazonian River Wave SVG */}
-      <div className="amazonian-curve-top">
-        <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
-          <path 
-            d="M0,32L60,48C120,64,240,96,360,96C480,96,600,64,720,53.3C840,43,960,53,1080,69.3C1200,85,1320,107,1380,117.3L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" 
-            fill="currentColor" 
-            opacity="0.07"
-          />
-        </svg>
-      </div>
-
       <div className="hero-container">
         <div className="hero-content">
-          {/* Cultural Tag */}
+          {/* Cultural Badge */}
           <div className="hero-badge">
             <span className="badge-dot"></span>
-            <span>Selva Peruana · Loreto & Ucayali</span>
+            <span>Selva Peruana · Loreto & Pacaya Samiria</span>
             <span className="badge-divider">•</span>
             <span className="badge-highlight">Pueblo Kukama-Kukamiria</span>
           </div>
@@ -40,27 +38,26 @@ export default function Hero({ onStartLearn, onExploreStories }) {
 
           {/* Welcome subtitle */}
           <p className="hero-description">
-            Una plataforma interactiva dedicada a la preservación y aprendizaje de la 
-            lengua <strong>Kokama</strong>, nacida en los meandros sagrados del río Marañón 
-            y los espejos de agua de la Amazonía peruana.
+            Plataforma educativa interactiva sobre la lengua, mitos y cosmovisión del 
+            pueblo <strong>Kokama</strong>, guardianes milenarios de los ríos Marañón, Huallaga y Ucayali.
           </p>
 
-          {/* Welcome Audio Player Pill */}
+          {/* Interactive Welcome Audio Button */}
           <div className="hero-greeting-pill">
             <button 
               className="greeting-audio-btn"
               onClick={handleListenWelcome}
-              title="Escuchar saludo en Kokama"
+              title="Escuchar saludo tradicional en Kokama"
             >
               <span className="audio-icon">🔊</span>
               <span className="greeting-text">
-                <em>"Etepe, mai katu!"</em> (¡Hola, bienvenidos!)
+                <em>"Etepe, mai katu!"</em> (¡Hola, bienvenidos a Ikua!)
               </span>
               <span className="greeting-tag">Escuchar</span>
             </button>
           </div>
 
-          {/* CTAs */}
+          {/* Call to Actions */}
           <div className="hero-actions">
             <button 
               className="btn-primary-amazon"
@@ -82,44 +79,78 @@ export default function Hero({ onStartLearn, onExploreStories }) {
                 onExploreStories();
               }}
             >
-              <span>📖 Cuentos y Leyendas</span>
+              <span>📖 Cuentos y Mitos</span>
             </button>
           </div>
         </div>
 
-        {/* Hero Visual Card / Hero Image Showcase */}
+        {/* Hero Visual Card Showcase with Glassmorphism */}
         <div className="hero-visual">
           <div className="hero-image-frame">
             <img 
               src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80" 
-              alt="Río serpenteante en la selva amazónica peruana" 
+              alt="Río serpenteante en la selva amazónica de Loreto" 
               className="hero-main-img"
               loading="eager"
             />
-            <div className="image-overlay-glow"></div>
+            <div className="hero-image-gradient-dark"></div>
             
-            {/* Floating Cultural Card 1 */}
-            <div className="floating-stat-card card-top">
+            {/* Dynamic Interactive Card 1 */}
+            <div 
+              className="floating-stat-card card-top"
+              onClick={() => sounds.speak("Yapana", "[ya-pa-na]")}
+              title="Toca para escuchar 'Yapana' (Canoa)"
+            >
               <span className="float-icon">🛶</span>
               <div>
-                <strong className="float-title">Gente del Agua</strong>
-                <p className="float-sub">Navegantes milenarios del Marañón</p>
+                <strong className="float-title">Gente del Agua · Yapana</strong>
+                <p className="float-sub">Navegantes milenarios del río Marañón</p>
               </div>
+              <span className="float-audio-pill">🔊</span>
             </div>
 
-            {/* Floating Cultural Card 2 */}
-            <div className="floating-stat-card card-bottom">
+            {/* Dynamic Interactive Card 2 */}
+            <div 
+              className="floating-stat-card card-bottom"
+              onClick={() => sounds.speak("Yawar", "[ya-war]")}
+              title="Toca para escuchar 'Yawar' (Jaguar)"
+            >
               <span className="float-icon">🐆</span>
               <div>
                 <strong className="float-title">Yawar · El Otorongo</strong>
-                <p className="float-sub">Guardián espiritual del monte</p>
+                <p className="float-sub">Fuerza espiritual y guardián del monte</p>
               </div>
+              <span className="float-audio-pill">🔊</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Stats Ribbon */}
+      {/* Dynamic Marquee Ticker: Continuous Smooth Stream of Kokama Wisdom */}
+      <div className="dynamic-wisdom-ticker">
+        <div className="ticker-label-badge">
+          <span>🌿 Voces del Río:</span>
+        </div>
+        <div className="ticker-track">
+          <div className="ticker-content">
+            {tickerPhrases.concat(tickerPhrases).map((item, idx) => (
+              <button 
+                key={idx} 
+                className="ticker-item-btn"
+                onClick={() => sounds.speak(item.kokama, item.phonetic)}
+                title="Haz clic para escuchar la frase en Kokama"
+              >
+                <span className="ticker-kokama">{item.kokama}</span>
+                <span className="ticker-dot">•</span>
+                <span className="ticker-spanish">{item.spanish}</span>
+                <span className="ticker-audio-icon">🔊</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Ribbon in Glassmorphism */}
       <div className="hero-stats-ribbon">
         <div className="stats-container">
           {languageStats.map((stat, idx) => (
