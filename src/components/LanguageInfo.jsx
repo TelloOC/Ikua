@@ -9,90 +9,105 @@ export default function LanguageInfo() {
 
   const slides = [
     {
-      id: 'origen',
-      badge: '🛶 Origen Milenario',
-      title: 'Grandes Navegantes: "La Gente del Agua"',
-      subtitle: 'Familia Lingüística Tupí-Guaraní · Siglos de Historia Fluvial',
+      id: 'estadisticas',
+      badge: '📊 Cifras Oficiales INEI & MinCul',
+      title: 'La Realidad en Cifras: Una Lengua en Alerta Crítica',
+      subtitle: 'Censo Nacional 2017 & Base de Datos de Pueblos Indígenas (BDPI - Perú)',
       image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1000&q=80',
-      tagline: 'Del corazón de la selva al curso del río Marañón',
-      highlights: [
-        { icon: '🛶', title: 'Navegación Fluvial', desc: 'Maestros en tallar canoas ("yapana") en un solo tronco de cedro.' },
-        { icon: '🌊', title: 'Confluencia Sagrada', desc: 'Asentados en Nauta y Requena, donde nace el río Amazonas.' },
-        { icon: '🌱', title: 'Agricultura Fluvial', desc: 'Cultivo sustentable en barriales y restingas según las crecientes.' }
+      tagline: 'Apenas el 4.5% de la población étnica habla con fluidez la lengua materna',
+      statNumbers: [
+        { val: '30,735', lbl: 'Población que se autoidentifica como pueblo Kukama en Perú (INEI 2017)', icon: '👥' },
+        { val: '~1,400', lbl: 'Hablantes nativos reales con fluidez (menos del 5% del total étnico)', alert: true, icon: '⚠️' },
+        { val: '>85%', lbl: 'De los hablantes fluidos son ancianos sabios mayores de 60 años', icon: '👴' },
+        { val: 'Crítico', lbl: 'Estado de vitalidad lingüística catalogado por la UNESCO', badge: 'En Peligro Severo', icon: '🚨' }
       ],
-      quote: {
-        text: 'Para el pueblo Kukama, el río no es un camino de agua; es un ser con alma y nuestra primera escuela de vida.',
-        author: 'Sabia abuela de la comunidad de Nauta, Loreto'
-      },
+      highlights: [
+        { icon: '📉', title: 'Brecha Generacional Extrema', desc: 'Casi el 95% de los jóvenes y niños Kukama solo aprendieron castellano como primera lengua.' },
+        { icon: '⏳', title: 'Cuenta Regresiva Biológica', desc: 'Cada año fallecen abuelos sabios que eran los últimos custodios de cantos y saberes fluviales.' },
+        { icon: '📍', title: 'Concentración Vulnerable', desc: 'La mayoría de hablantes sobrevivientes residen dispersos en cuencas del Marañón, Samiria y Ucayali.' }
+      ],
       actionAudio: {
-        label: 'Escuchar frase: "Yaki ta ikua kukama"',
-        text: 'Yaki ta ikua kukama',
-        phonetic: '[ya-ki ta i-kwa ku-ka-ma]'
+        label: 'Escuchar clamor en Kokama: "Kukama i purukara"',
+        text: 'Kukama i purukara',
+        phonetic: '[ku-ka-ma i pu-ru-ka-ra]'
       }
     },
     {
-      id: 'fonetica',
-      badge: '🗣️ Peculiaridad Lingüística',
-      title: 'La Sexta Vocal "ɨ" y las Dos Voces del Pueblo',
-      subtitle: 'Rasgos Únicos de la Fonética y Cosmovisión Kokama',
+      id: 'por-que-resolver',
+      badge: '🚨 Emergencia Cultural y Humana',
+      title: '¿Por Qué es un Problema Crucial que se Debe Resolver?',
+      subtitle: 'La pérdida de una lengua no es solo un asunto de palabras, es la muerte de un universo',
       image: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80',
-      tagline: 'Una armonía oral que refleja el murmullo del río',
+      tagline: 'Cuando muere un idioma, se extingue una biblioteca viviente irreemplazable',
       highlights: [
-        { icon: 'ɨ', title: 'La Vocal Central Alta "ɨ"', desc: 'Sonido gutural profundo entre la "i" y la "u", esencial en palabras como Wepɨ (Uno).' },
-        { icon: '👥', title: 'Habla de Hombres y Mujeres', desc: 'Distinción gramatical única según el género del hablante en el Kokama clásico.' },
-        { icon: '🎶', title: 'Musicalidad Tonal', desc: 'Estructura rítmica diseñada para resonar sobre las aguas abiertas del río.' }
+        { icon: '🌿', title: 'Pérdida de la Farmacia Botánica', desc: 'Cientos de plantas medicinales amazónicas solo existen con su nombre, dosis y uso espiritual en Kokama. La ciencia moderna aún no ha descifrado muchas de ellas.' },
+        { icon: '🛡️', title: 'Defensa del Territorio y los Ríos', desc: 'La lengua es el pilar de la identidad comunitaria para defender las reservas naturales (como Pacaya Samiria) frente a derrames petroleros y tala ilegal.' },
+        { icon: '⚖️', title: 'Vulneración de Derechos Humanos', desc: 'La Constitución y convenios internacionales (OIT 169) garantizan el derecho a la lengua originaria; perderla es resignarse a la asimilación forzada.' },
+        { icon: '🌊', title: 'Cosmovisión de las Aguas Vivas', desc: 'El Kokama no concibe al río como recurso inerte, sino como un ser vivo sagrado (Uni). Perder la lengua es perder esa ética ecológica vital para el planeta.' }
       ],
-      interactiveBoard: [
-        { term: 'Wepɨ', label: 'Número Uno', phonetic: '[güép-uh]' },
-        { term: 'Yawatï', label: 'Tortuga fluvial', phonetic: '[ya-wa-túh]' },
-        { term: 'Etepe', label: 'Saludo de paz', phonetic: '[e-te-pe]' },
-        { term: 'Irapatse', label: 'Muchas gracias', phonetic: '[i-ra-pat-se]' }
+      quote: {
+        text: 'Cuando un abuelo sabio fallece sin haber podido enseñar su lengua a sus nietos, es como si una biblioteca milenaria se incendiara en el corazón de la selva.',
+        author: 'Reflexión de líderes comunitarios de Nauta, Loreto'
+      }
+    },
+    {
+      id: 'falta-educacion',
+      badge: '🏫 Emergencia en las Aulas',
+      title: 'La Falta de Educación: La Brecha de la EIB en Loreto',
+      subtitle: 'Menos del 25% de escuelas en territorio Kokama cuentan con docentes bilingües capacitados',
+      image: 'https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=1000&q=80',
+      tagline: 'Aulas rurales donde el idioma de los abuelos está ausente en la pizarra',
+      highlights: [
+        { icon: '👨‍🏫', title: 'Déficit Alarmante de Docentes Bilingües', desc: 'La gran mayoría de profesores asignados a comunidades ribereñas son hispanohablantes foráneos que no conocen ni una sola palabra en Kokama.' },
+        { icon: '📚', title: 'Inexistencia de Materiales Didácticos', desc: 'Faltan libros escolares, cartillas ilustradas y plataformas digitales diseñadas con la fonética y el alfabeto oficial aprobado de la lengua.' },
+        { icon: '🎯', title: 'Castellanización Curricular Homogénea', desc: 'Las evaluaciones estandarizadas del Estado exigen rendimiento en castellano, orillando a directores y docentes a dejar de lado la enseñanza originaria.' },
+        { icon: '📻', title: 'Resistencia Autogestionada', desc: 'Ante la ausencia estatal, iniciativas comunitarias como Radio Ucamara en Nauta y la plataforma Ikua luchan por crear recursos pedagógicos propios.' }
+      ],
+      badgeStatus: 'Brecha Educativa Crítica en Loreto'
+    },
+    {
+      id: 'razones-desaparicion',
+      badge: '🥀 Causas de la Desaparición',
+      title: '¿Por Qué Está Desapareciendo en la Selva Amazónica?',
+      subtitle: 'Las 4 heridas históricas y sociales que quebraron la transmisión oral familiar',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80',
+      tagline: 'Factores que silenciaron la voz del pueblo entre 1950 y la actualidad',
+      highlights: [
+        { 
+          icon: '🚫', 
+          title: '1. Traumas Escolares y Castigos del Pasado (1950-1990)', 
+          desc: 'Durante generaciones, en las escuelas rurales de Loreto se aplicaban castigos físicos y humillaciones a los niños que hablaban Kokama. Por amor y protección, muchos padres decidieron no enseñárselo a sus hijos para evitarles el dolor de la discriminación.' 
+        },
+        { 
+          icon: '💔', 
+          title: '2. Ruptura de la Transmisión Intergeneracional en el Hogar', 
+          desc: 'El hogar familiar dejó de ser el nido de la lengua. Los abuelos solo hablaban Kokama entre ancianos, y el castellano se convirtió en la lengua exclusiva para criar a los hijos.' 
+        },
+        { 
+          icon: '🏙️', 
+          title: '3. Migración Urbana por Contaminación y Falta de Oportunidades', 
+          desc: 'Los derrames petroleros y la escasez de pesca en los ríos empujan a familias enteras hacia las periferias de Nauta e Iquitos, donde la presión social urbana acelera el abandono del idioma indígena.' 
+        },
+        { 
+          icon: '📱', 
+          title: '4. Hegemonía de Medios de Comunicación Masivos', 
+          desc: 'La televisión, la radio comercial e internet inundan la selva en castellano absoluto, sin cuotas ni espacios que visibilicen la riqueza de las lenguas originarias amazónicas.' 
+        }
       ]
     },
     {
-      id: 'botanica',
-      badge: '🌿 Farmacia Sagrada de la Selva',
-      title: 'Herencia Botánica y Medicina Milenaria',
-      subtitle: 'Más de 300 Plantas Medicinales Clasificadas en la Lengua',
+      id: 'soluciones-accion',
+      badge: '✨ Rescate y Soluciones',
+      title: 'El Plan de Acción: Cómo Revertir la Desaparición',
+      subtitle: 'Tecnología, escuelas interculturales y empoderamiento de la juventud',
       image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
-      tagline: 'El bosque no es madera, es salud, espíritu y vida',
+      tagline: 'Aún estamos a tiempo: la lengua renace cuando los jóvenes deciden hablarla',
       highlights: [
-        { icon: '🍃', title: 'Chuchuhuasi y Uña de Gato', desc: 'Fortalecedores del sistema inmunológico y el espíritu del caminante.' },
-        { icon: '🌴', title: 'Aguaje (Moriche)', desc: 'Fruto reina de Loreto que nutre y da vitalidad a las familias ribereñas.' },
-        { icon: '🌺', title: 'Ícaros de Sanación', desc: 'Cantos sagrados en Kokama que conectan al curandero con la planta madre.' }
-      ],
-      counter: {
-        number: '+300',
-        label: 'Especies medicinales registradas con nombre y uso ancestral en Kokama'
-      }
-    },
-    {
-      id: 'resistencia',
-      badge: '🛡️ Resistencia y Futuro',
-      title: 'El Renacer de la Voz: Radio Ucamara y la Juventud',
-      subtitle: 'Iniciativas de Revitalización en las Escuelas Bilingües (EIB)',
-      image: 'https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=1000&q=80',
-      tagline: 'La lengua de los abuelos se transforma en la música de los jóvenes',
-      highlights: [
-        { icon: '📻', title: 'Radio Ucamara (Nauta)', desc: 'Emisora comunitaria que lidera la producción de canciones y videos en Kokama.' },
-        { icon: '🎤', title: 'Videoclip "Kumbarikira"', desc: 'Canción viral creada por niños y jóvenes de Nauta que dio la vuelta al mundo.' },
-        { icon: '🏫', title: 'Educación Bilingüe Intercultural', desc: 'Más de 120 comunidades en Loreto enseñando el idioma a nuevas generaciones.' }
-      ],
-      badgeStatus: 'En Proceso Activo de Revitalización'
-    },
-    {
-      id: 'confluencia',
-      badge: '🗺️ Geografía Sagrada',
-      title: 'La Confluencia del Marañón y Ucayali: Cuna del Amazonas',
-      subtitle: 'Territorio de Loreto · El Gran Vientre de Agua de Sudamérica',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80',
-      tagline: 'Donde las aguas marrones y negras se abrazan para dar vida',
-      highlights: [
-        { icon: '📍', title: 'Nauta · Puerta a Pacaya Samiria', desc: 'Capital de la provincia de Loreto y corazón del pueblo Kukama.' },
-        { icon: '🌊', title: 'Río Marañón & Ucayali', desc: 'Dos gigantes fluviales que al unirse forman oficialmente el río Amazonas.' },
-        { icon: '🐟', title: 'Reserva Pacaya Samiria', desc: 'La "Selva de los Espejos", área protegida con la mayor población de paiches y bufeos.' }
-      ],
-      coordinates: '4°30′S 73°35′W · Loreto, Perú'
+        { icon: '💻', title: 'Plataformas Educativas Digitales como Ikua', desc: 'Aprovechar la tecnología interactiva, juegos y audios fonéticos para que cualquier persona en el Perú y el mundo pueda aprender y valorar el Kokama.' },
+        { icon: '👴👧', title: 'Nidos de Lengua Abuelo-Nieto', desc: 'Reunir a los ancianos sabios con escolares en talleres vivenciales donde se enseña la lengua tejiendo canoas, pescando y narrando mitos.' },
+        { icon: '🎶', title: 'Música, Rap y Arte Viral', desc: 'Producciones como el videoclip "Kumbarikira" demuestran que cantar en Kokama es moderno, empoderador y motivo de orgullo nacional.' },
+        { icon: '🏛️', title: 'Políticas Públicas Reales con Presupuesto', desc: 'Exigir al Ministerio de Educación y al Gobierno Regional de Loreto plazas docentes bilingües con sueldos dignos e incentivos reales.' }
+      ]
     }
   ];
 
@@ -102,8 +117,8 @@ export default function LanguageInfo() {
   useEffect(() => {
     if (!isAutoPlaying) return;
 
-    const interval = 80; // actualización suave de la barra cada 80ms (8 segundos en total)
-    const step = (100 / (8000 / interval));
+    const interval = 80; // 9 segundos por diapositiva para permitir lectura de estadísticas
+    const step = (100 / (9000 / interval));
 
     timerRef.current = setInterval(() => {
       setProgress((prev) => {
@@ -146,16 +161,16 @@ export default function LanguageInfo() {
   return (
     <section id="lengua" className="section-container language-info-section">
       <div className="section-header">
-        <span className="section-eyebrow">Conocimiento Dinámico</span>
-        <h2 className="section-title">Sabiduría, Origen e Importancia</h2>
+        <span className="section-eyebrow">Realidad Lingüística en Alerta</span>
+        <h2 className="section-title">Estadísticas Reales y Urgencia de Salvaguarda</h2>
         <p className="section-subtitle">
-          Explora los pilares de la lengua y cosmovisión Kokama a través de nuestro carrusel
-          interactivo de saberes ancestrales de la Amazonía peruana.
+          Cifras oficiales sobre la crisis de extinción del Kokama-Kukamiria en Loreto, la falta de 
+          educación bilingüe intercultural y las razones históricas por las que está desapareciendo en la selva peruana.
         </p>
       </div>
 
-      {/* Dynamic Carousel Navigation Bar */}
-      <div className="carousel-nav-tabs">
+      {/* Pestañas de navegación rápida del carrusel */}
+      <div className="carousel-nav-tabs reality-tabs">
         {slides.map((s, idx) => (
           <button
             key={s.id}
@@ -168,13 +183,13 @@ export default function LanguageInfo() {
         ))}
       </div>
 
-      {/* Main Dynamic Carousel Showcase */}
-      <div
-        className="carousel-stage-card animate-fade-in"
+      {/* Tarjeta Escenario Principal del Carrusel Dinámico */}
+      <div 
+        className="carousel-stage-card reality-stage-card animate-fade-in"
         onMouseEnter={() => setIsAutoPlaying(false)}
         onMouseLeave={() => setIsAutoPlaying(true)}
       >
-        {/* Progress Bar Header */}
+        {/* Barra de progreso y controles superiores */}
         <div className="carousel-progress-header">
           <div className="carousel-controls-left">
             <span className="carousel-counter-text">
@@ -184,63 +199,86 @@ export default function LanguageInfo() {
           </div>
 
           <div className="carousel-controls-right">
-            <button
+            <button 
               className={`btn-play-pause ${isAutoPlaying ? 'playing' : 'paused'}`}
               onClick={toggleAutoPlay}
               title={isAutoPlaying ? "Pausar avance automático" : "Reanudar avance automático"}
             >
               {isAutoPlaying ? '⏸ Pausa' : '▶ Automático'}
             </button>
-            <button className="carousel-nav-arrow" onClick={handlePrev} title="Slide anterior">
+            <button className="carousel-nav-arrow" onClick={handlePrev} title="Anterior informe">
               ❮
             </button>
-            <button className="carousel-nav-arrow" onClick={handleNext} title="Siguiente slide">
+            <button className="carousel-nav-arrow" onClick={handleNext} title="Siguiente informe">
               ❯
             </button>
           </div>
         </div>
 
-        {/* Progress bar line */}
+        {/* Línea animada de temporizador */}
         <div className="carousel-progress-track">
           <div className="carousel-progress-bar" style={{ width: `${progress}%` }}></div>
         </div>
 
-        {/* Slide Body */}
+        {/* Contenido Dinámico de la Diapositiva */}
         <div className="carousel-slide-grid">
-          {/* Left Column: Visual with overlay */}
+          {/* Columna Izquierda: Imagen de impacto y badges */}
           <div className="carousel-media-wrap">
             <img src={current.image} alt={current.title} className="carousel-media-img" />
             <div className="carousel-media-gradient"></div>
-
-            <div className="carousel-media-badge">
+            
+            <div className="carousel-media-badge alert-badge">
               <span>{current.badge}</span>
             </div>
 
-            {current.coordinates && (
-              <div className="carousel-floating-coord">
-                <span>📍 {current.coordinates}</span>
-              </div>
-            )}
-
-            {current.counter && (
-              <div className="carousel-floating-stat">
-                <span className="floating-stat-num">{current.counter.number}</span>
-                <span className="floating-stat-lbl">{current.counter.label}</span>
+            {/* Si tiene números estadísticos destacados en la imagen */}
+            {current.statNumbers && (
+              <div className="reality-stat-overlay-box">
+                <span className="stat-overlay-title">📊 Diagnóstico Lingüístico (Loreto):</span>
+                <div className="stat-overlay-grid">
+                  <div className="stat-overlay-item">
+                    <strong>30,735</strong>
+                    <span>Población Étnica</span>
+                  </div>
+                  <div className="stat-overlay-item alert">
+                    <strong>~1,400</strong>
+                    <span>Hablantes Activos</span>
+                  </div>
+                  <div className="stat-overlay-item">
+                    <strong>+85%</strong>
+                    <span>Mayores de 60 años</span>
+                  </div>
+                </div>
               </div>
             )}
           </div>
 
-          {/* Right Column: Dynamic Content & Highlights */}
+          {/* Columna Derecha: Títulos, Estadísticas y Módulos de Información */}
           <div className="carousel-content-wrap">
             <div className="carousel-title-block">
               <span className="carousel-subtitle">{current.subtitle}</span>
               <h3 className="carousel-main-title">{current.title}</h3>
             </div>
 
-            {/* Structured Highlight Cards (No textos sueltos) */}
+            {/* Si la diapositiva tiene métricas estadísticas detalladas */}
+            {current.statNumbers && (
+              <div className="reality-numbers-deck">
+                {current.statNumbers.map((stat, i) => (
+                  <div key={i} className={`stat-metric-card ${stat.alert ? 'alert-highlight' : ''}`}>
+                    <span className="metric-icon">{stat.icon}</span>
+                    <div className="metric-info">
+                      <strong className="metric-val">{stat.val}</strong>
+                      <p className="metric-lbl">{stat.lbl}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Módulos de Puntos Clave y Razones (Estructurados sin textos sueltos) */}
             <div className="carousel-highlights-deck">
               {current.highlights.map((h, i) => (
-                <div key={i} className="highlight-mini-card">
+                <div key={i} className="highlight-mini-card reality-mini-card">
                   <div className="highlight-mini-icon">{h.icon}</div>
                   <div className="highlight-mini-text">
                     <strong>{h.title}</strong>
@@ -250,46 +288,33 @@ export default function LanguageInfo() {
               ))}
             </div>
 
-            {/* Slide-specific interactive widget */}
+            {/* Cita testimonial si existe */}
             {current.quote && (
-              <div className="carousel-quote-box">
+              <div className="carousel-quote-box alert-quote">
                 <span className="quote-mark">“</span>
                 <p className="quote-body">{current.quote.text}</p>
                 <span className="quote-sig">— {current.quote.author}</span>
-                {current.actionAudio && (
-                  <button
-                    className="btn-carousel-audio"
-                    onClick={() => sounds.speak(current.actionAudio.text, current.actionAudio.phonetic)}
-                  >
-                    🔊 {current.actionAudio.label}
-                  </button>
-                )}
               </div>
             )}
 
-            {current.interactiveBoard && (
-              <div className="carousel-soundboard-box">
-                <span className="soundboard-title">🎧 Toca para escuchar la fonética en tiempo real:</span>
-                <div className="soundboard-grid">
-                  {current.interactiveBoard.map((item, i) => (
-                    <button
-                      key={i}
-                      className="soundboard-btn"
-                      onClick={() => sounds.speak(item.term, item.phonetic)}
-                    >
-                      <span className="sb-term">{item.term}</span>
-                      <span className="sb-sub">{item.label}</span>
-                      <span className="sb-icon">🔊</span>
-                    </button>
-                  ))}
-                </div>
+            {/* Botón de Audio Clamor si existe */}
+            {current.actionAudio && (
+              <div className="reality-action-bar">
+                <button 
+                  className="btn-carousel-audio alert-btn-audio"
+                  onClick={() => sounds.speak(current.actionAudio.text, current.actionAudio.phonetic)}
+                >
+                  🔊 {current.actionAudio.label}
+                </button>
+                <span className="action-meta">Fonética indígena de resistencia</span>
               </div>
             )}
 
+            {/* Badge de Estado Crítico si existe */}
             {current.badgeStatus && (
-              <div className="carousel-status-pill">
-                <span className="status-live-dot"></span>
-                <strong>Estado:</strong> {current.badgeStatus} · UNESCO & DREA Loreto
+              <div className="carousel-status-pill alert-status">
+                <span className="status-live-dot red"></span>
+                <strong>Alerta Educativa:</strong> {current.badgeStatus} · UNESCO & Ministerio de Cultura del Perú
               </div>
             )}
           </div>

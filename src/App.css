@@ -1194,6 +1194,178 @@
       animation: pulseAnim 1.5s infinite;
     }
 
+    /* Estilos Especiales para Realidad Lingüística y Estadísticas */
+    .reality-tabs .carousel-nav-tab.active {
+      background: linear-gradient(135deg, #e76f51 0%, #b91c1c 100%);
+      border-color: #f87171;
+      box-shadow: 0 4px 18px rgba(231, 111, 81, 0.45);
+    }
+
+    .alert-badge {
+      background: rgba(185, 28, 28, 0.9) !important;
+      border-color: rgba(248, 113, 113, 0.45) !important;
+      color: #fef2f2 !important;
+      box-shadow: 0 0 14px rgba(239, 68, 68, 0.35);
+    }
+
+    .reality-stat-overlay-box {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(5, 20, 14, 0.94);
+      backdrop-filter: blur(12px);
+      border: 1.5px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .stat-overlay-title {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--c-gold-500);
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-overlay-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      text-align: center;
+    }
+
+    .stat-overlay-item strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--c-beige-50);
+      line-height: 1.1;
+    }
+
+    .stat-overlay-item span {
+      font-size: 0.72rem;
+      color: var(--c-muted-text);
+      line-height: 1.2;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .stat-overlay-item.alert strong {
+      color: #f87171;
+      text-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+    }
+
+    /* Deck de Métricas Estadísticas */
+    .reality-numbers-deck {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .stat-metric-card {
+      background: rgba(7, 26, 19, 0.85);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .stat-metric-card:hover {
+      background: rgba(16, 44, 32, 0.9);
+      border-color: var(--c-jungle-emerald);
+      transform: translateY(-2px);
+    }
+
+    .stat-metric-card.alert-highlight {
+      border-color: rgba(239, 68, 68, 0.5);
+      background: rgba(127, 29, 29, 0.25);
+    }
+
+    .metric-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    .metric-val {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--c-gold-500);
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .alert-highlight .metric-val {
+      color: #fca5a5;
+    }
+
+    .metric-lbl {
+      font-size: 0.78rem;
+      color: var(--c-cream-text);
+      margin: 0;
+      line-height: 1.35;
+    }
+
+    .reality-mini-card {
+      border-left: 3.5px solid var(--c-jungle-emerald);
+    }
+
+    .reality-mini-card:hover {
+      border-left-color: var(--c-gold-500);
+      transform: translateX(5px);
+    }
+
+    .alert-quote {
+      border-left-color: #e76f51 !important;
+      background: rgba(231, 111, 81, 0.1) !important;
+    }
+
+    .reality-action-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .alert-btn-audio {
+      background: linear-gradient(135deg, #e76f51 0%, #c2410c 100%) !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(231, 111, 81, 0.35);
+    }
+
+    .alert-btn-audio:hover {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
+      transform: scale(1.03);
+    }
+
+    .action-meta {
+      font-size: 0.8rem;
+      color: var(--c-jungle-300);
+      font-style: italic;
+    }
+
+    .alert-status {
+      border-color: rgba(239, 68, 68, 0.45) !important;
+      background: rgba(127, 29, 29, 0.3) !important;
+      color: #fca5a5 !important;
+    }
+
+    .status-live-dot.red {
+      background: #ef4444 !important;
+      box-shadow: 0 0 10px #ef4444;
+    }
+
     /* ==========================================================================
    APRENDER (Tarjetas en Vidrio Verde y Apartado Interactivo)
    ========================================================================== */

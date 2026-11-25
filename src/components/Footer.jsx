@@ -61,7 +61,7 @@ export default function Footer({ onNavigate }) {
               </li>
               <li>
                 <button onClick={() => onNavigate('lengua')}>
-                  ➔ Origen de la Lengua
+                  ➔ Estadísticas y Realidad
                 </button>
               </li>
               <li>

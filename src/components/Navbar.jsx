@@ -73,7 +73,7 @@ export default function Navbar({ activeSection, onNavigate }) {
             className={`nav-link ${activeSection === 'lengua' ? 'active' : ''}`}
             onClick={() => handleNavClick('lengua')}
           >
-            Lengua & Origen
+            Estadísticas & Realidad
           </button>
           <button 
             className={`nav-link ${activeSection === 'aprender' ? 'active' : ''}`}
@@ -138,7 +138,7 @@ export default function Navbar({ activeSection, onNavigate }) {
             <span>🌿</span> Inicio
           </button>
           <button className="mobile-nav-link" onClick={() => handleNavClick('lengua')}>
-            <span>📜</span> Lengua & Origen
+            <span>📊</span> Estadísticas & Realidad
           </button>
           <button className="mobile-nav-link" onClick={() => handleNavClick('aprender')}>
             <span>📚</span> Aprender (Módulos)
