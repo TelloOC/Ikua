@@ -488,3 +488,216 @@ export const cultureInfo = [
     ]
   }
 ];
+
+// --- DATOS PARA LOS NUEVOS MINIJUEGOS ---
+
+// 1. Minijuego: Navegante del Marañón (Atrapa el Vocablo)
+export const riverMissionData = [
+  {
+    id: 1,
+    mission: "¡La corriente se agita! Atrapa al PEZ GIGANTE de Pacaya Samiria:",
+    targetHint: "Pez de escamas colosal que respira aire",
+    correctKokama: "Warakusu",
+    correctSpanish: "Paiche",
+    icon: "🐟",
+    options: [
+      { text: "Warakusu", icon: "🐟", isCorrect: true },
+      { text: "Yawar", icon: "🐆", isCorrect: false },
+      { text: "Arara", icon: "🦜", isCorrect: false },
+      { text: "Yawatï", icon: "🐢", isCorrect: false }
+    ]
+  },
+  {
+    id: 2,
+    mission: "¡Aparecen huellas en la orilla! Atrapa al FELINO SAGRADO del monte:",
+    targetHint: "El gran cazador y protector de los árboles",
+    correctKokama: "Yawar",
+    correctSpanish: "Jaguar / Otorongo",
+    icon: "🐆",
+    options: [
+      { text: "Wapuri", icon: "🐬", isCorrect: false },
+      { text: "Yawar", icon: "🐆", isCorrect: true },
+      { text: "Tapira", icon: "🦛", isCorrect: false },
+      { text: "Ka'i", icon: "🐒", isCorrect: false }
+    ]
+  },
+  {
+    id: 3,
+    mission: "¡Cuenta las canoas del puerto! Atrapa el número TRES:",
+    targetHint: "Número impar de la trinidad amazónica",
+    correctKokama: "Motsapɨr",
+    correctSpanish: "Tres",
+    icon: "3️⃣",
+    options: [
+      { text: "Wepɨ", icon: "1️⃣", isCorrect: false },
+      { text: "Mukuika", icon: "2️⃣", isCorrect: false },
+      { text: "Motsapɨr", icon: "3️⃣", isCorrect: true },
+      { text: "Iruaka", icon: "4️⃣", isCorrect: false }
+    ]
+  },
+  {
+    id: 4,
+    mission: "¡Un remolino mágico en el río! Atrapa al DELFÍN ROSADO:",
+    targetHint: "Espíritu mítico de las cochas de Nauta",
+    correctKokama: "Wapuri",
+    correctSpanish: "Bufeo Colorado",
+    icon: "🐬",
+    options: [
+      { text: "Tukana", icon: "🦤", isCorrect: false },
+      { text: "Wapuri", icon: "🐬", isCorrect: true },
+      { text: "Warakusu", icon: "🐟", isCorrect: false },
+      { text: "Tapira", icon: "🦛", isCorrect: false }
+    ]
+  },
+  {
+    id: 5,
+    mission: "¡El primer rayo de sol del día! Atrapa el número UNO:",
+    targetHint: "El inicio de la cuenta con la vocal ɨ",
+    correctKokama: "Wepɨ",
+    correctSpanish: "Uno",
+    icon: "1️⃣",
+    options: [
+      { text: "Wepɨ", icon: "1️⃣", isCorrect: true },
+      { text: "Pichka", icon: "5️⃣", isCorrect: false },
+      { text: "Sokta", icon: "6️⃣", isCorrect: false },
+      { text: "Kanchis", icon: "7️⃣", isCorrect: false }
+    ]
+  },
+  {
+    id: 6,
+    mission: "¡Una criatura nada con paciencia en el remanso! Atrapa a la TORTUGA FLUVIAL:",
+    targetHint: "Símbolo de longevidad en las playas del Ucayali",
+    correctKokama: "Yawatï",
+    correctSpanish: "Charapa / Taricaya",
+    icon: "🐢",
+    options: [
+      { text: "Arara", icon: "🦜", isCorrect: false },
+      { text: "Ka'i", icon: "🐒", isCorrect: false },
+      { text: "Yawatï", icon: "🐢", isCorrect: true },
+      { text: "Yawar", icon: "🐆", isCorrect: false }
+    ]
+  },
+  {
+    id: 7,
+    mission: "¡Las dos manos completas de la comunidad! Atrapa el número DIEZ:",
+    targetHint: "Literalmente 'dos manos completas' (mukuika po)",
+    correctKokama: "Mukuika Po",
+    correctSpanish: "Diez",
+    icon: "🔟",
+    options: [
+      { text: "Wepɨ Po", icon: "5️⃣", isCorrect: false },
+      { text: "Mukuika Po", icon: "🔟", isCorrect: true },
+      { text: "Iskon", icon: "9️⃣", isCorrect: false },
+      { text: "Pusak", icon: "8️⃣", isCorrect: false }
+    ]
+  }
+];
+
+// 2. Minijuego: Armador Sagrado (Constructor de Frases)
+export const sentencePuzzleData = [
+  {
+    id: 1,
+    spanish: "El agua pura es nuestra vida",
+    words: ["Uni", "tsupi", "ore", "rekove"],
+    phonetic: "[u-ni tsu-pi o-re re-ko-ve]",
+    lore: "El agua ('Uni') es concebida como la madre sagrada de todos los seres.",
+    hint: "Comienza con la palabra del agua: 'Uni'"
+  },
+  {
+    id: 2,
+    spanish: "¿Cómo estás, querido hermano / amigo?",
+    words: ["Mai", "katu", "erua"],
+    phonetic: "[mai ka-tu e-ru-a]",
+    lore: "El saludo fraterno que une a las familias en las malocas ribereñas.",
+    hint: "La expresión de pregunta es 'Mai katu'"
+  },
+  {
+    id: 3,
+    spanish: "El jaguar camina en el bosque",
+    words: ["Yawar", "pua", "ka'a", "pe"],
+    phonetic: "[ya-war pu-a ka-a pe]",
+    lore: "'Yawar' es el señor del monte ('ka'a') que cuida los senderos.",
+    hint: "El sujeto principal es el felino 'Yawar'"
+  },
+  {
+    id: 4,
+    spanish: "El guacamayo vuela sobre el cielo azul",
+    words: ["Arara", "weve", "yvaga", "ari"],
+    phonetic: "[a-ra-ra we-ve y-va-ga a-ri]",
+    lore: "Las plumas de 'Arara' representan los rayos del sol y la libertad.",
+    hint: "Empieza con el ave 'Arara'"
+  },
+  {
+    id: 5,
+    spanish: "Nosotros aprendemos la lengua Kukama",
+    words: ["Yaki", "ta", "ikua", "kukama"],
+    phonetic: "[ya-ki ta i-kwa ku-ka-ma]",
+    lore: "'Ikua' es el verbo de conocer y heredar la memoria viva.",
+    hint: "El pronombre 'Nosotros' es 'Yaki ta'"
+  }
+];
+
+// 3. Minijuego: El Oído de la Selva (Detective Acústico)
+export const soundMysteryData = [
+  {
+    id: 1,
+    audioWord: "Yawar",
+    phonetic: "[ya-war]",
+    question: "¿A qué criatura o símbolo corresponde este sonido?",
+    options: [
+      { id: "yawar", name: "Otorongo / Jaguar", icon: "🐆", isCorrect: true, lore: "¡Correcto! 'Yawar' es el gran felino sagrado del bosque amazónico." },
+      { id: "wapuri", name: "Delfín Rosado", icon: "🐬", isCorrect: false },
+      { id: "arara", name: "Guacamayo Rojo", icon: "🦜", isCorrect: false },
+      { id: "tapira", name: "Sachavaca / Tapir", icon: "🦛", isCorrect: false }
+    ]
+  },
+  {
+    id: 2,
+    audioWord: "Wapuri",
+    phonetic: "[wa-pu-ri]",
+    question: "¿Qué habitante legendario de las cochas acabas de escuchar?",
+    options: [
+      { id: "warakusu", name: "Paiche Gigante", icon: "🐟", isCorrect: false },
+      { id: "wapuri", name: "Bufeo Colorado", icon: "🐬", isCorrect: true, lore: "¡Acertaste! 'Wapuri' es el espíritu guardián de las aguas de Nauta." },
+      { id: "yawati", name: "Tortuga Taricaya", icon: "🐢", isCorrect: false },
+      { id: "kai", name: "Mono Choro", icon: "🐒", isCorrect: false }
+    ]
+  },
+  {
+    id: 3,
+    audioWord: "Wepɨ",
+    phonetic: "[güép-uh]",
+    question: "¿Qué número ancestral de la cuenta Kokama ha sonado?",
+    options: [
+      { id: "motsapir", name: "Número Tres (Motsapɨr)", icon: "3️⃣", isCorrect: false },
+      { id: "mukuika", name: "Número Dos (Mukuika)", icon: "2️⃣", isCorrect: false },
+      { id: "wepi", name: "Número Uno (Wepɨ)", icon: "1️⃣", isCorrect: true, lore: "¡Exacto! 'Wepɨ' es el primer número, con la sexta vocal 'ɨ' gutural." },
+      { id: "iruaka", name: "Número Cuatro (Iruaka)", icon: "4️⃣", isCorrect: false }
+    ]
+  },
+  {
+    id: 4,
+    audioWord: "Warakusu",
+    phonetic: "[wa-ra-ku-su]",
+    question: "¿Quién es el gigante de escamas de Pacaya Samiria?",
+    options: [
+      { id: "warakusu", name: "Paiche (Warakusu)", icon: "🐟", isCorrect: true, lore: "¡Excelente! 'Warakusu' supera los 3 metros y protege las cochas vírgenes." },
+      { id: "yawati", name: "Charapa (Yawatï)", icon: "🐢", isCorrect: false },
+      { id: "yawar", name: "Otorongo (Yawar)", icon: "🐆", isCorrect: false },
+      { id: "tukana", name: "Tucán (Tukana)", icon: "🦤", isCorrect: false }
+    ]
+  },
+  {
+    id: 5,
+    audioWord: "Etepe",
+    phonetic: "[e-te-pe]",
+    question: "¿Qué expresión de saludo y encuentro resonó en el río?",
+    options: [
+      { id: "irapatse", name: "Muchas gracias (Irapatse)", icon: "🙏", isCorrect: false },
+      { id: "etepe", name: "Hola / Paz (Etepe)", icon: "👋", isCorrect: true, lore: "¡Bien hecho! 'Etepe' es el saludo cálido y fraterno entre hermanos ribereños." },
+      { id: "uni", name: "Agua limpia (Uni)", icon: "💧", isCorrect: false },
+      { id: "takuara", name: "Casa maloca (Takuara)", icon: "🛖", isCorrect: false }
+    ]
+  }
+];
+

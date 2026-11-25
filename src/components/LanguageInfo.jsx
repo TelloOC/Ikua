@@ -149,7 +149,7 @@ export default function LanguageInfo() {
         <span className="section-eyebrow">Conocimiento Dinámico</span>
         <h2 className="section-title">Sabiduría, Origen e Importancia</h2>
         <p className="section-subtitle">
-          Explora los pilares de la lengua y cosmovisión Kokama a través de nuestro carrusel 
+          Explora los pilares de la lengua y cosmovisión Kokama a través de nuestro carrusel
           interactivo de saberes ancestrales de la Amazonía peruana.
         </p>
       </div>
@@ -169,7 +169,7 @@ export default function LanguageInfo() {
       </div>
 
       {/* Main Dynamic Carousel Showcase */}
-      <div 
+      <div
         className="carousel-stage-card animate-fade-in"
         onMouseEnter={() => setIsAutoPlaying(false)}
         onMouseLeave={() => setIsAutoPlaying(true)}
@@ -184,7 +184,7 @@ export default function LanguageInfo() {
           </div>
 
           <div className="carousel-controls-right">
-            <button 
+            <button
               className={`btn-play-pause ${isAutoPlaying ? 'playing' : 'paused'}`}
               onClick={toggleAutoPlay}
               title={isAutoPlaying ? "Pausar avance automático" : "Reanudar avance automático"}
@@ -211,7 +211,7 @@ export default function LanguageInfo() {
           <div className="carousel-media-wrap">
             <img src={current.image} alt={current.title} className="carousel-media-img" />
             <div className="carousel-media-gradient"></div>
-            
+
             <div className="carousel-media-badge">
               <span>{current.badge}</span>
             </div>
@@ -257,7 +257,7 @@ export default function LanguageInfo() {
                 <p className="quote-body">{current.quote.text}</p>
                 <span className="quote-sig">— {current.quote.author}</span>
                 {current.actionAudio && (
-                  <button 
+                  <button
                     className="btn-carousel-audio"
                     onClick={() => sounds.speak(current.actionAudio.text, current.actionAudio.phonetic)}
                   >

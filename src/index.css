@@ -1,3 +1,8 @@
+/* ==========================================================================
+   IKUA - ESTILO MODERNO, CULTURAL Y AMAZÓNICO PROFUNDO
+   Fondo: Verde Selva Oscuro, Acentos Esmeralda, Beige, Blanco y Marrón Cálido
+   ========================================================================== */
+
 /* Variables globales de diseño: Paleta Amazónica Profunda y Dinámica */
 :root {
   /* Fondo Verde Selva Oscuro Amazónico (Deep Amazonian Rainforest) */
@@ -21,7 +26,7 @@
   --c-jungle-100: #d8f3dc;
 
   /* Tonos Beige, Crema y Blanco para texto y contrastes cálidos */
-  --c-beige-50:  #fdfcf9;
+  --c-beige-50: #fdfcf9;
   --c-beige-100: #f7f4ea;
   --c-beige-200: #ede6d6;
   --c-beige-300: #e3d5ca;
@@ -66,7 +71,9 @@
 }
 
 /* Reset y base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -81,7 +88,7 @@ html {
 body {
   font-family: var(--font-main);
   background-color: var(--bg-deep);
-  background-image: 
+  background-image:
     radial-gradient(circle at 15% 20%, rgba(45, 106, 79, 0.2) 0%, transparent 45%),
     radial-gradient(circle at 85% 60%, rgba(20, 55, 40, 0.25) 0%, transparent 50%),
     radial-gradient(circle at 50% 90%, rgba(233, 196, 106, 0.08) 0%, transparent 40%);
@@ -131,6 +138,7 @@ button {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

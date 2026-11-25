@@ -76,7 +76,7 @@ export default function Footer({ onNavigate }) {
               </li>
               <li>
                 <button onClick={() => onNavigate('juegos')}>
-                  ➔ Juegos Didácticos
+                  ➔ 5 Juegos Interactivos
                 </button>
               </li>
               <li>
@@ -149,6 +149,19 @@ export default function Footer({ onNavigate }) {
             <span className="badge-fluvial">Tupí-Guaraní</span>
             <span className="badge-fluvial">Pacaya Samiria</span>
           </div>
+        </div>
+
+        {/* QUANTUM CORE Ownership and Creator Banner */}
+        <div className="quantum-core-credits-banner">
+          <div className="quantum-badge-chip">
+            <span className="quantum-core-icon">⚛️</span>
+            <span className="quantum-core-team">QUANTUM CORE</span>
+          </div>
+          <p className="quantum-core-statement">
+            Esta página web, su desarrollo, diseño conceptual, arquitectura interactiva y derechos 
+            de creación pertenecen al grupo <strong className="quantum-highlight">QUANTUM CORE</strong>.
+          </p>
+          <span className="quantum-signature">Propiedad intelectual y tecnológica · QUANTUM CORE 2026</span>
         </div>
       </div>
     </footer>

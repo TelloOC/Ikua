@@ -19,7 +19,7 @@ export default function Hero({ onStartLearn, onExploreStories }) {
       {/* Dynamic Background Canopy Texture & Ambient Glows */}
       <div className="hero-ambient-glow glow-left"></div>
       <div className="hero-ambient-glow glow-right"></div>
-      
+
       <div className="hero-container">
         <div className="hero-content">
           {/* Cultural Badge */}
@@ -38,13 +38,13 @@ export default function Hero({ onStartLearn, onExploreStories }) {
 
           {/* Welcome subtitle */}
           <p className="hero-description">
-            Plataforma educativa interactiva sobre la lengua, mitos y cosmovisión del 
+            Plataforma educativa interactiva sobre la lengua, mitos y cosmovisión del
             pueblo <strong>Kokama</strong>, guardianes milenarios de los ríos Marañón, Huallaga y Ucayali.
           </p>
 
           {/* Interactive Welcome Audio Button */}
           <div className="hero-greeting-pill">
-            <button 
+            <button
               className="greeting-audio-btn"
               onClick={handleListenWelcome}
               title="Escuchar saludo tradicional en Kokama"
@@ -59,7 +59,7 @@ export default function Hero({ onStartLearn, onExploreStories }) {
 
           {/* Call to Actions */}
           <div className="hero-actions">
-            <button 
+            <button
               className="btn-primary-amazon"
               onClick={() => {
                 sounds.playWoodClick();
@@ -72,7 +72,7 @@ export default function Hero({ onStartLearn, onExploreStories }) {
               </svg>
             </button>
 
-            <button 
+            <button
               className="btn-secondary-amazon"
               onClick={() => {
                 sounds.playWoodClick();
@@ -87,16 +87,16 @@ export default function Hero({ onStartLearn, onExploreStories }) {
         {/* Hero Visual Card Showcase with Glassmorphism */}
         <div className="hero-visual">
           <div className="hero-image-frame">
-            <img 
-              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80" 
-              alt="Río serpenteante en la selva amazónica de Loreto" 
+            <img
+              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80"
+              alt="Río serpenteante en la selva amazónica de Loreto"
               className="hero-main-img"
               loading="eager"
             />
             <div className="hero-image-gradient-dark"></div>
-            
+
             {/* Dynamic Interactive Card 1 */}
-            <div 
+            <div
               className="floating-stat-card card-top"
               onClick={() => sounds.speak("Yapana", "[ya-pa-na]")}
               title="Toca para escuchar 'Yapana' (Canoa)"
@@ -110,7 +110,7 @@ export default function Hero({ onStartLearn, onExploreStories }) {
             </div>
 
             {/* Dynamic Interactive Card 2 */}
-            <div 
+            <div
               className="floating-stat-card card-bottom"
               onClick={() => sounds.speak("Yawar", "[ya-war]")}
               title="Toca para escuchar 'Yawar' (Jaguar)"
@@ -134,8 +134,8 @@ export default function Hero({ onStartLearn, onExploreStories }) {
         <div className="ticker-track">
           <div className="ticker-content">
             {tickerPhrases.concat(tickerPhrases).map((item, idx) => (
-              <button 
-                key={idx} 
+              <button
+                key={idx}
                 className="ticker-item-btn"
                 onClick={() => sounds.speak(item.kokama, item.phonetic)}
                 title="Haz clic para escuchar la frase en Kokama"
