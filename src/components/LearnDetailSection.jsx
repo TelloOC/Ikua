@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { sounds } from '../utils/soundEngine';
 import { numbersList, alphabetList, animalsList, natureList } from '../data/kokamaData';
 
-export default function LearnDetailSection({ selectedCategoryId, onClose, onChangeCategory }) {
+export default function LearnDetailSection({ selectedCategoryId, onChangeCategory }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentFlashcardIndex, setCurrentFlashcardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [practiceAnswer, setPracticeAnswer] = useState(null);
   const [practiceFeedback, setPracticeFeedback] = useState(null);
 
-  // Determinar los datos según la categoría activa
+  // Determinar los datos según el módulo didáctico activo
   let title = '';
   let subtitle = '';
   let icon = '';
@@ -116,21 +116,22 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
   };
 
   return (
-    <div id="apartado-detalle" className="learn-detail-container animate-fade-in">
-      {/* Detail Header with breadcrumb and close button */}
+    <div id="modulo-interactivo-detalle" className="learn-detail-container module-inner-structure animate-fade-in">
+      {/* Header interno del Módulo Didáctico */}
       <div className="detail-header-card">
         <div className="detail-top-nav">
           <div className="detail-badge-group">
             <span className="detail-icon-bubble">{icon}</span>
             <div>
-              <span className="detail-eyebrow">Apartado Educativo Interactivo</span>
+              <span className="detail-eyebrow">Estructura del Módulo · Aprendizaje Interactivo</span>
               <h3 className="detail-title">{title} · <em>{subtitle}</em></h3>
             </div>
           </div>
 
           <div className="detail-header-actions">
-            {/* Quick switcher buttons */}
+            {/* Selector rápido entre los módulos didácticos */}
             <div className="category-mini-switch">
+              <span className="mini-switch-caption">Módulos:</span>
               <button 
                 className={`switch-chip ${selectedCategoryId === 'numeros' ? 'active' : ''}`}
                 onClick={() => onChangeCategory('numeros')}
@@ -156,20 +157,11 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
                 🌿 Naturaleza
               </button>
             </div>
-
-            <button 
-              className="btn-close-detail"
-              onClick={onClose}
-              title="Volver al menú de tarjetas"
-            >
-              ✕ Cerrar Apartado
-            </button>
           </div>
         </div>
 
         <p className="detail-instructions">
-          Explora cada término, haz clic en el altavoz 🔊 para escuchar la pronunciación auténtica con 
-          la fonética indígena, rota la tarjeta interactiva de práctica o consulta el glosario completo.
+          Contenido interactivo integrado de este módulo: rota la tarjeta didáctica 3D para ver su traducción, escucha la fonética tradicional indígena en voz alta o busca términos en el catálogo completo.
         </p>
       </div>
 
@@ -178,7 +170,7 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
         {/* The 3D Flip Flashcard */}
         <div className="flashcard-column">
           <div className="studio-card-header">
-            <span className="studio-tag">Tarjeta de Estudio Interactivo</span>
+            <span className="studio-tag">Tarjeta Didáctica 3D</span>
             <span className="counter-pill">{currentFlashcardIndex + 1} de {items.length}</span>
           </div>
 
@@ -249,7 +241,7 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
         {/* Quick Challenge on this category */}
         <div className="quick-challenge-column">
           <div className="studio-card-header">
-            <span className="studio-tag">Mini Reto del Apartado</span>
+            <span className="studio-tag">Mini Reto del Módulo</span>
             <span className="challenge-star">⭐ Practica</span>
           </div>
 
@@ -300,8 +292,8 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
       <div className="vocabulary-grid-section">
         <div className="glossary-header-bar">
           <div>
-            <h4>Catálogo Completo de Términos ({items.length})</h4>
-            <p>Lista interactiva con reproductor individual y significado detallado.</p>
+            <h4>Catálogo de Términos del Módulo ({items.length})</h4>
+            <p>Lista integrada con reproductor fonético individual y significado contextual.</p>
           </div>
 
           {/* Search Box */}

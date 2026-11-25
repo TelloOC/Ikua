@@ -4,28 +4,19 @@ import { sounds } from '../utils/soundEngine';
 import LearnDetailSection from './LearnDetailSection';
 
 export default function LearnSection() {
-  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+  const [selectedCategoryId, setSelectedCategoryId] = useState('numeros');
 
   const handleCardClick = (catId) => {
     sounds.playWoodClick();
     setSelectedCategoryId(catId);
 
-    // Scroll suave hacia el apartado interactivo
+    // Desplazamiento suave hacia la estructura interactiva del módulo
     setTimeout(() => {
-      const detailEl = document.getElementById('apartado-detalle');
+      const detailEl = document.getElementById('modulo-interactivo-detalle');
       if (detailEl) {
-        detailEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        detailEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
-    }, 100);
-  };
-
-  const handleCloseDetail = () => {
-    sounds.playWoodClick();
-    setSelectedCategoryId(null);
-    const learnSection = document.getElementById('aprender');
-    if (learnSection) {
-      learnSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    }, 80);
   };
 
   const handleChangeCategory = (catId) => {
@@ -37,14 +28,14 @@ export default function LearnSection() {
     <section id="aprender" className="section-container learn-main-section">
       <div className="section-header">
         <span className="section-eyebrow">Módulos Didácticos</span>
-        <h2 className="section-title">Aprende la Lengua y Cosmovisión Kokama</h2>
+        <h2 className="section-title">Estructura de Aprendizaje Kokama</h2>
         <p className="section-subtitle">
-          Elige una tarjeta para ingresar a su apartado interactivo especializado, donde 
-          podrás escuchar la pronunciación, practicar con tarjetas didácticas y poner a prueba tu conocimiento.
+          Selecciona cualquiera de los módulos didácticos para interactuar directamente con su 
+          contenido interno: tarjetas didácticas 3D, audios fonéticos, mini retos y catálogo de vocabulario.
         </p>
       </div>
 
-      {/* 4 Interactive Category Cards */}
+      {/* 4 Category Cards acting as the interactive module selector */}
       <div className="category-cards-grid">
         {categoriesData.map((cat) => {
           const isSelected = selectedCategoryId === cat.id;
@@ -60,7 +51,7 @@ export default function LearnSection() {
                   handleCardClick(cat.id);
                 }
               }}
-              title={`Haz clic para abrir el apartado de ${cat.subtitle}`}
+              title={`Ver contenido didáctico de ${cat.subtitle}`}
             >
               <div className="card-top-indicator">
                 <span className="card-badge-pill">{cat.badge}</span>
@@ -79,7 +70,7 @@ export default function LearnSection() {
 
               <div className="card-action-bar">
                 <span className="action-explore-text">
-                  {isSelected ? '✓ Apartado Abierto' : 'Explorar Apartado ➔'}
+                  {isSelected ? '● Módulo Activo' : 'Ver Módulo ➔'}
                 </span>
                 <span className="action-circle-arrow">
                   <svg viewBox="0 0 20 20" fill="currentColor">
@@ -92,14 +83,13 @@ export default function LearnSection() {
         })}
       </div>
 
-      {/* Opened Apartado / Section Detail */}
-      {selectedCategoryId && (
+      {/* Estructura Interna del Módulo Didáctico Activo (Siempre integrada) */}
+      <div className="module-internal-wrapper">
         <LearnDetailSection 
           selectedCategoryId={selectedCategoryId}
-          onClose={handleCloseDetail}
           onChangeCategory={handleChangeCategory}
         />
-      )}
+      </div>
     </section>
   );
 }
