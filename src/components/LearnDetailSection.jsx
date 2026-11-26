@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { sounds } from '../utils/soundEngine';
 import { numbersList, alphabetList, animalsList, natureList } from '../data/kokamaData';
 
-export default function LearnDetailSection({ selectedCategoryId, onChangeCategory }) {
+export default function LearnDetailSection({ selectedCategoryId, onClose, onChangeCategory }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentFlashcardIndex, setCurrentFlashcardIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -117,19 +117,19 @@ export default function LearnDetailSection({ selectedCategoryId, onChangeCategor
 
   return (
     <div id="modulo-interactivo-detalle" className="learn-detail-container module-inner-structure animate-fade-in">
-      {/* Header interno del Módulo Didáctico */}
+      {/* Header interno integrado del Módulo Didáctico */}
       <div className="detail-header-card">
         <div className="detail-top-nav">
           <div className="detail-badge-group">
             <span className="detail-icon-bubble">{icon}</span>
             <div>
-              <span className="detail-eyebrow">Estructura del Módulo · Aprendizaje Interactivo</span>
+              <span className="detail-eyebrow">Estructura Interna · Módulo Didáctico</span>
               <h3 className="detail-title">{title} · <em>{subtitle}</em></h3>
             </div>
           </div>
 
           <div className="detail-header-actions">
-            {/* Selector rápido entre los módulos didácticos */}
+            {/* Selector rápido entre módulos */}
             <div className="category-mini-switch">
               <span className="mini-switch-caption">Módulos:</span>
               <button 
@@ -157,6 +157,15 @@ export default function LearnDetailSection({ selectedCategoryId, onChangeCategor
                 🌿 Naturaleza
               </button>
             </div>
+
+            {/* Botón de repliegue del módulo */}
+            <button 
+              className="btn-close-detail"
+              onClick={onClose}
+              title="Plegar este módulo didáctico"
+            >
+              ▲ Plegar Módulo
+            </button>
           </div>
         </div>
 

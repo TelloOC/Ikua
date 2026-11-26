@@ -4,19 +4,23 @@ import { sounds } from '../utils/soundEngine';
 import LearnDetailSection from './LearnDetailSection';
 
 export default function LearnSection() {
-  const [selectedCategoryId, setSelectedCategoryId] = useState('numeros');
+  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
 
   const handleCardClick = (catId) => {
     sounds.playWoodClick();
-    setSelectedCategoryId(catId);
-
-    // Desplazamiento suave hacia la estructura interactiva del módulo
-    setTimeout(() => {
-      const detailEl = document.getElementById('modulo-interactivo-detalle');
-      if (detailEl) {
-        detailEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    }, 80);
+    if (selectedCategoryId === catId) {
+      // Si ya está abierto, se pliega/oculta
+      setSelectedCategoryId(null);
+    } else {
+      // Se abre el módulo seleccionado
+      setSelectedCategoryId(catId);
+      setTimeout(() => {
+        const detailEl = document.getElementById('modulo-interactivo-detalle');
+        if (detailEl) {
+          detailEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 100);
+    }
   };
 
   const handleChangeCategory = (catId) => {
@@ -70,7 +74,7 @@ export default function LearnSection() {
 
               <div className="card-action-bar">
                 <span className="action-explore-text">
-                  {isSelected ? '● Módulo Activo' : 'Ver Módulo ➔'}
+                  {isSelected ? '▲ Plegar Módulo' : 'Abrir Módulo ➔'}
                 </span>
                 <span className="action-circle-arrow">
                   <svg viewBox="0 0 20 20" fill="currentColor">
@@ -83,13 +87,16 @@ export default function LearnSection() {
         })}
       </div>
 
-      {/* Estructura Interna del Módulo Didáctico Activo (Siempre integrada) */}
-      <div className="module-internal-wrapper">
-        <LearnDetailSection 
-          selectedCategoryId={selectedCategoryId}
-          onChangeCategory={handleChangeCategory}
-        />
-      </div>
+      {/* Estructura Interna del Módulo Didáctico Activo (Visible únicamente al seleccionar) */}
+      {selectedCategoryId && (
+        <div className="module-internal-wrapper">
+          <LearnDetailSection 
+            selectedCategoryId={selectedCategoryId}
+            onClose={() => setSelectedCategoryId(null)}
+            onChangeCategory={handleChangeCategory}
+          />
+        </div>
+      )}
     </section>
   );
 }
