@@ -46,7 +46,7 @@ export default function Footer({ onNavigate }) {
               <span>📍 Nauta · Requena · Loreto, Perú</span>
             </div>
             <div className="footer-motto">
-              <em>"Uni tsupi ore rekove"</em> (El agua pura es nuestra vida)
+              <em>"Kukama aitsemekatun ini kumitsa"</em> (El kukama es nuestra verdadera lengua)
             </div>
           </div>
 
@@ -97,7 +97,7 @@ export default function Footer({ onNavigate }) {
             {isSent ? (
               <div className="contact-success-box animate-fade-in">
                 <span className="success-icon">💌</span>
-                <h5>¡Irapatse! (¡Muchas gracias!)</h5>
+                <h5>¡Yutsurpaki! (¡Muchas gracias!)</h5>
                 <p>Tu mensaje ha sido recibido con cariño. Nos pondremos en contacto pronto.</p>
               </div>
             ) : (

@@ -1,54 +1,56 @@
 // Base de datos cultural y lingüística de Ikua (Pueblo Kukama-Kukamiria)
 // Loreto, Amazonía Peruana
+// Vocabulario y expresiones verificadas exclusivamente en:
+// Vallejos Yopán, R. & Amías Murayari, R. (2015). Diccionario Kukama-Kukamiria * Castellano. AIDESEP / ISEPL / FORMABIAP.
 
 export const languageStats = [
-  { label: "Autoidentificados", value: "10,762", detail: "Según el Censo Nacional 2017 — INEI" },
-  { label: "Población Estimada", value: "37,053", detail: "En comunidades nativas según BDPI · Ministerio de Cultura" },
-  { label: "Transmisión Activa", value: "Solo abuelos", detail: "UNESCO y BDPI: lengua viva principalmente en la tercera generación" },
-  { label: "Estado de Riesgo", value: "En peligro", detail: "«Seriamente en peligro» (BDPI) · «En peligro de extinción» (UNESCO)" }
+  { label: "Autoidentificados", value: "10,762", detail: "Censo Nacional 2017 — INEI · Perú" },
+  { label: "En comunidades", value: "37,053", detail: "Estimado BDPI · Ministerio de Cultura del Perú" },
+  { label: "Hablantes nativos", value: "1,185", detail: "Aprendieron Kukama como lengua materna en la infancia · Censo 2017 — INEI" },
+  { label: "Estado lingüístico", value: "Seriamente en peligro", detail: "Clasificación oficial del Ministerio de Educación del Perú (MINEDU)" }
 ];
 
 export const categoriesData = [
   {
     id: "numeros",
-    title: "Papachika",
-    subtitle: "Los Números en Kokama",
+    title: "Wepe – Chunka",
+    subtitle: "Los Números en Kukama-Kukamiria",
     icon: "🔢",
     badge: "1 al 10",
-    description: "Aprende el sistema numérico ancestral Kokama basado en las manos y los ciclos de la naturaleza.",
+    description: "Aprende la numeración tradicional Kukama-Kukamiria registrada en el diccionario oficial (wepe, mukuika, mutsapɨrɨka, iruaka...).",
     color: "#2d6a4f",
     bgPattern: "jungle",
-    count: "10 términos"
+    count: "10 números"
   },
   {
     id: "alfabeto",
-    title: "Ikuashawa",
-    subtitle: "Alfabeto y Frases Clave",
+    title: "Kumitsa & Grafías",
+    subtitle: "Alfabeto FORMABIAP y Saludos",
     icon: "🔤",
     badge: "Fonética y Saludos",
-    description: "Conoce las 5 vocales, la singular vocal 'ɨ', consonantes y expresiones de cortesía y encuentro.",
+    description: "Conoce las 17 grafías oficiales (a, ch, e, i, ɨ, j, k, m, n, p, r, sh, t, ts, u, w, y) y los saludos cotidianos del diccionario.",
     color: "#8c5e3c",
     bgPattern: "earth",
     count: "16 términos"
   },
   {
     id: "animales",
-    title: "Miyari",
-    subtitle: "Fauna de la Selva Peruana",
+    title: "Fauna Amazónica",
+    subtitle: "Animales de la Selva y el Río",
     icon: "🐆",
     badge: "Biodiversidad",
-    description: "Descubre los nombres ancestrales del jaguar, el delfín rosado, la boa madre, el paiche y las aves sagradas.",
+    description: "Descubre los nombres auténticos del otorongo (aɨmanta), el bufeo (ipirawira), el paiche (iwatsu), la taricaya y aves amazónicas.",
     color: "#1b4332",
     bgPattern: "fauna",
-    count: "10 animales"
+    count: "8 animales"
   },
   {
     id: "naturaleza",
-    title: "Ka'a & Teta",
-    subtitle: "Ríos, Plantas y Comunidad",
+    title: "Ɨwɨrati & Uni",
+    subtitle: "Naturaleza, Río y Comunidad",
     icon: "🌿",
     badge: "Cosmovisión",
-    description: "Palabras del agua, la canoa, la maloca, el sol, la luna y las plantas medicinales que curan el espíritu.",
+    description: "Palabras esenciales del agua (uni), el río (parana), la canoa (ɨara), la casa (uka), el sol (kuarachi), la luna (yatsɨ) y los sabios (ikuan).",
     color: "#a06a42",
     bgPattern: "flora",
     count: "12 vocablos"
@@ -56,422 +58,473 @@ export const categoriesData = [
 ];
 
 export const numbersList = [
-  { number: 1, kokama: "Wepɨ", phonetic: "[güép-uh]", spanish: "Uno", usage: "Wepɨ ipuri (Un pez)", note: "Se pronuncia con la sexta vocal 'ɨ' gutural" },
-  { number: 2, kokama: "Mukuika", phonetic: "[mu-kwi-ka]", spanish: "Dos", usage: "Mukuika miyari (Dos animales)", note: "Base dual muy común en la cultura fluvial" },
-  { number: 3, kokama: "Motsapɨr", phonetic: "[mot-sa-puhr]", spanish: "Tres", usage: "Motsapɨr arara (Tres guacamayos)", note: "Término clásico tupí" },
-  { number: 4, kokama: "Iruaka", phonetic: "[i-ru-a-ka]", spanish: "Cuatro", usage: "Iruaka yapana (Cuatro canoas)", note: "Número de los cuatro rumbos del río" },
-  { number: 5, kokama: "Wepɨ Po", phonetic: "[güe-püh po]", spanish: "Cinco", usage: "Wepɨ po kuarachy (Cinco soles)", note: "Literalmente 'una mano completa' (po = mano)" },
-  { number: 6, kokama: "Sokta", phonetic: "[sok-ta]", spanish: "Seis", usage: "Sokta takuara (Seis casas)", note: "También 'wepɨ ipo yupuni' (pasando una mano)" },
-  { number: 7, kokama: "Kanchis", phonetic: "[kan-chis]", spanish: "Siete", usage: "Kanchis yasy (Siete lunas)", note: "Adoptado por contacto interétnico regional" },
-  { number: 8, kokama: "Pusak", phonetic: "[pu-sak]", spanish: "Ocho", usage: "Pusak warakusu (Ocho paiches)", note: "Uso extendido en comunidades bilingües" },
-  { number: 9, kokama: "Iskon", phonetic: "[is-kon]", spanish: "Nueve", usage: "Iskon yawar (Nueve jaguares)", note: "Representa la plenitud antes del ciclo" },
-  { number: 10, kokama: "Mukuika Po", phonetic: "[mu-kwi-ka po]", spanish: "Diez", usage: "Mukuika po churi (Diez niños)", note: "Literalmente 'dos manos completas'" }
+  { number: 1, kokama: "Wepe", phonetic: "[we-pe]", spanish: "Uno", usage: "Wepe ɨara (Una canoa)", note: "Se pronuncia igual que en la escritura práctica FORMABIAP" },
+  { number: 2, kokama: "Mukuika", phonetic: "[mu-kwi-ka]", spanish: "Dos", usage: "Mukuika ritama (Dos comunidades)", note: "Forma estándar en el Diccionario Kukama-Kukamiria" },
+  { number: 3, kokama: "Mutsapɨrɨka", phonetic: "[mu-tsa-pɨ-rɨ-ka]", spanish: "Tres", usage: "Mutsapɨrɨka arara (Tres guacamayos)", note: "Incluye la vocal central alta 'ɨ'" },
+  { number: 4, kokama: "Iruaka", phonetic: "[i-ru-a-ka]", spanish: "Cuatro", usage: "Iruaka uka (Cuatro casas)", note: "Término numérico tradicional kukama" },
+  { number: 5, kokama: "Pichka", phonetic: "[pich-ka]", spanish: "Cinco", usage: "Pichka kuarachi (Cinco días / soles)", note: "Registrado en el diccionario oficial (p. 169)" },
+  { number: 6, kokama: "Tsukta", phonetic: "[tsuk-ta]", spanish: "Seis", usage: "Tsukta tarikaya (Seis taricayas)", note: "Inicia con el dígrafo 'ts' propio del alfabeto kukama" },
+  { number: 7, kokama: "Kantsi", phonetic: "[kan-tsi]", spanish: "Siete", usage: "Kantsi yatsɨ (Siete lunas / meses)", note: "Registrado en el diccionario oficial" },
+  { number: 8, kokama: "Putsa", phonetic: "[pu-tsa]", spanish: "Ocho", usage: "Putsa iwatsu (Ocho paiches)", note: "Registrado en el diccionario oficial" },
+  { number: 9, kokama: "Itskun", phonetic: "[its-kun]", spanish: "Nueve", usage: "Itskun yapukita (Nueve remos)", note: "Registrado en el diccionario oficial" },
+  { number: 10, kokama: "Chunka", phonetic: "[chun-ka]", spanish: "Diez", usage: "Chunka awa (Diez personas)", note: "También: mukuika chunka (20), wepe pacha (100), wepe waranka (1000)" }
 ];
 
 export const alphabetList = [
   {
     letter: "A a",
     kokama: "Arara",
-    meaning: "Guacamayo rojo y azul",
+    meaning: "Guacamayo",
     phonetic: "[a-ra-ra]",
     category: "Vocal oral",
-    example: "Arara weve ka'a ari (El guacamayo vuela sobre el bosque)"
+    example: "Arara pɨtani (guacamayo rojo) / Arara tsenepuka (guacamayo azul)"
+  },
+  {
+    letter: "Ch ch",
+    kokama: "Chunka",
+    meaning: "Diez",
+    phonetic: "[chun-ka]",
+    category: "Consonante africada",
+    example: "Mukuika chunka (Veinte)"
   },
   {
     letter: "E e",
-    kokama: "Etepe",
-    meaning: "Hola / Saludo de paz y respeto",
-    phonetic: "[e-te-pe]",
-    category: "Vocal oral",
-    example: "Etepe erua (Hola, hermano / amigo)"
+    kokama: "Era kuemataka",
+    meaning: "Buen día (saludo en cualquier momento del día)",
+    phonetic: "[e-ra kwe-ma-ta-ka]",
+    category: "Saludo frecuente",
+    example: "Era na kuema (Buenos días) · Respuesta: Era ta kuema (H) / Era tsa kuema (M)"
   },
   {
     letter: "I i",
     kokama: "Ikua",
-    meaning: "Saber, conocer, sabiduría",
+    meaning: "Saber, conocer, ser hábil",
     phonetic: "[i-kwa]",
     category: "Vocal oral",
-    example: "Yaki ta ikua kukama (Nosotros aprendemos la lengua kukama)"
+    example: "Etse tseta ikua kumitsa kukama (Yo quiero aprender a hablar kukama)"
   },
   {
-    letter: "ɨ ɨ",
-    kokama: "Wepɨ",
-    meaning: "Uno (vocal central alta cerrada)",
-    phonetic: "[güép-uh]",
-    category: "Vocal amazónica especial",
-    example: "Es la sexta vocal distintiva de la familia Tupí-Guaraní"
+    letter: "Ɨ ɨ",
+    kokama: "Ɨara",
+    meaning: "Canoa",
+    phonetic: "[ɨ-a-ra]",
+    category: "Sexta vocal amazónica",
+    example: "La 'ɨ' es una vocal central alta característica del Kukama-Kukamiria"
   },
   {
-    letter: "U u",
-    kokama: "Uni",
-    meaning: "Agua / Río vital",
-    phonetic: "[u-ni]",
-    category: "Vocal oral",
-    example: "Uni tsupi katu (El agua es buena y pura)"
+    letter: "J j",
+    kokama: "Ajan",
+    meaning: "Este / esta (demostrativo femenino)",
+    phonetic: "[a-han]",
+    category: "Consonante (uso específico)",
+    example: "La grafía 'j' aparece en voces como 'ajan' y 'ajaminu' (en DM: ikian)"
   },
   {
     letter: "K k",
-    kokama: "Kukama",
-    meaning: "Pueblo de la chacra y del agua",
-    phonetic: "[ku-ka-ma]",
+    kokama: "Kumitsa",
+    meaning: "Hablar / lengua, idioma",
+    phonetic: "[ku-mi-tsa]",
     category: "Consonante oclusiva",
-    example: "Kukama i purukara (El pueblo Kukama canta y resiste)"
+    example: "Kukama aitsemekatun ini kumitsa (El kukama es nuestra verdadera lengua)"
   },
   {
     letter: "M m",
-    kokama: "Mai katu",
-    meaning: "¿Cómo estás? / Saludo fraterno",
-    phonetic: "[mai ka-tu]",
-    category: "Frase de cortesía",
-    example: "Mai katu erua? — Katu ti (¿Cómo estás hermano? — Muy bien)"
+    kokama: "Maniawatipa na yuti",
+    meaning: "¿Cómo estás?",
+    phonetic: "[ma-nya-wa-ti-pa na yu-ti]",
+    category: "Saludo frecuente",
+    example: "Pregunta tradicional de saludo en la vida cotidiana"
+  },
+  {
+    letter: "N n",
+    kokama: "Ni mania",
+    meaning: "Ahí bien (estoy bien)",
+    phonetic: "[ni ma-nya]",
+    category: "Respuesta de saludo",
+    example: "Respuesta directa a 'Maniawatipa na yuti'"
   },
   {
     letter: "P p",
     kokama: "Parana",
-    meaning: "Río grande / Caudaloso",
+    meaning: "Río",
     phonetic: "[pa-ra-na]",
-    category: "Geografía sagrada",
-    example: "Parana Marañón (El gran río Marañón)"
+    category: "Geografía fluvial",
+    example: "Parana nuan (Río Amazonas)"
   },
   {
-    letter: "T ts",
-    kokama: "Tsupi",
-    meaning: "Verdadero, auténtico, justo",
-    phonetic: "[tsu-pi]",
-    category: "Valor ético",
-    example: "Kukama tsupi (Verdadero corazón kukama)"
+    letter: "R r",
+    kokama: "Ritama",
+    meaning: "Comunidad, pueblo",
+    phonetic: "[ri-ta-ma]",
+    category: "Vida comunitaria",
+    example: "Las comunidades ribereñas de Loreto"
+  },
+  {
+    letter: "Ts ts",
+    kokama: "Tsaniuri",
+    meaning: "Bienvenido (ven, pasa adelante)",
+    phonetic: "[tsa-nyu-ri]",
+    category: "Expresión de bienvenida",
+    example: "Saludo hospitalario al recibir visitas en la casa (uka)"
+  },
+  {
+    letter: "U u",
+    kokama: "Uni",
+    meaning: "Agua",
+    phonetic: "[u-ni]",
+    category: "Vocal oral",
+    example: "Uni mama (Madre del agua / yacumama)"
   },
   {
     letter: "Y y",
-    kokama: "Yawar",
-    meaning: "Jaguar / Otorongo",
-    phonetic: "[ya-gwar]",
-    category: "Fauna sagrada",
-    example: "Yawar pua ka'a pe (El jaguar camina en el bosque)"
+    kokama: "Yutsurpaki",
+    meaning: "Gracias",
+    phonetic: "[yu-tsur-pa-ki]",
+    category: "Expresión de gratitud",
+    example: "También se usa 'Ainan ta' / 'Ainan etse' (gracias, hasta ahí nomás)"
   },
   {
     letter: "Frase",
-    kokama: "Irapatse",
-    meaning: "Muchas gracias / Gratitud",
-    phonetic: "[i-ra-pat-se]",
-    category: "Expresión cotidiana",
-    example: "Irapatse tupan (Gracias a la vida y a la naturaleza)"
+    kokama: "Era na karuka",
+    meaning: "Buenas tardes",
+    phonetic: "[e-ra na ka-ru-ka]",
+    category: "Saludo vespertino",
+    example: "Respuesta: Era ta karuka (habla masculina) / Era tsa karuka (habla femenina)"
   },
   {
     letter: "Frase",
-    kokama: "Katu ti",
-    meaning: "Estoy bien / Todo está en calma",
-    phonetic: "[ka-tu ti]",
-    category: "Expresión cotidiana",
-    example: "Respuesta al saludo 'Mai katu'"
+    kokama: "Ini tseta ikua kuatiaraka kukamapu",
+    meaning: "Queremos aprender a escribir en kukama",
+    phonetic: "[i-ni tse-ta i-kwa kwa-tya-ra-ka ku-ka-ma-pu]",
+    category: "Expresión educativa",
+    example: "Frase registrada en el Diccionario Kukama-Kukamiria (p. 108)"
   }
 ];
 
 export const animalsList = [
   {
-    id: "yawar",
-    kokama: "Yawar",
-    phonetic: "[Ya-wár]",
-    spanish: "Otorongo / Jaguar",
+    id: "aimanta",
+    kokama: "Aɨmanta / Yawara parawa",
+    phonetic: "[a-ɨ-man-ta]",
+    spanish: "Otorongo / Tigre (Jaguar)",
     scientific: "Panthera onca",
-    category: "Felino sagrado",
+    category: "Felino amazónico",
     image: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=800&q=80",
-    description: "El felino más imponente de la Amazonía peruana. En la cosmovisión Kokama, representa la fuerza y el espíritu protector de los árboles antiguos.",
-    lore: "Los sabios abuelos cuentan que el jaguar no ataca a quien respeta los caminos ancestrales de la selva.",
-    curiosity: "Nada con agilidad en los ríos amazónicos y caza tanto en tierra como en orillas."
+    description: "El felino más imponente de la Amazonía peruana, registrado en el diccionario como 'aɨmanta' y 'yawara parawa'.",
+    lore: "En los relatos tradicionales del monte ('ɨwɨrati'), representa la fuerza y el respeto por la selva.",
+    curiosity: "Nada con agilidad en los ríos amazónicos y se desplaza tanto en tierra como en orillas."
   },
   {
-    id: "wapuri",
-    kokama: "Wapuri / Ipurapari",
-    phonetic: "[Wa-pú-ri]",
+    id: "ipirawira",
+    kokama: "Ipirawira pɨtani",
+    phonetic: "[i-pi-ra-wi-ra pɨ-ta-ni]",
     spanish: "Bufeo Colorado (Delfín Rosado)",
     scientific: "Inia geoffrensis",
-    category: "Espíritu fluvial",
+    category: "Fauna fluvial",
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    description: "El habitante mítico de las cochas y caños de Pacaya Samiria. Puede medir hasta 2.5 metros y posee un tono rosáceo característico.",
-    lore: "Se transforma en un caballero vestido de blanco con sombrero de paja en las noches de fiesta a orillas del Marañón.",
-    curiosity: "Posee vértebras cervicales libres, lo que le permite mover la cabeza en 90 grados entre raíces inundadas."
+    description: "El delfín de agua dulce de las cochas ('ɨpatsu') y caños ('tɨmatsa'). El diccionario distingue 'ipirawira pɨtani' (colorado) e 'ipirawira tsawe' (cenizo).",
+    lore: "Figura central de los relatos fluviales amazónicos ('ɨmɨntsara') sobre los seres encantados del agua ('karuara').",
+    curiosity: "Posee vértebras cervicales libres, lo que le permite girar la cabeza entre las raíces inundadas."
   },
   {
     id: "arara",
     kokama: "Arara",
-    phonetic: "[A-ra-ra]",
-    spanish: "Guacamayo Rojo",
+    phonetic: "[a-ra-ra]",
+    spanish: "Guacamayo",
     scientific: "Ara macao",
-    category: "Ave del dosel",
+    category: "Ave amazónica",
     image: "https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=800&q=80",
-    description: "El mensajero multicolor del cielo amazónico. Vuela en parejas inseparables sobre las copas de los aguajales.",
-    lore: "Sus plumas rojas, azules y amarillas eran utilizadas en coronas ceremoniales de líderes espirituales.",
-    curiosity: "Tiene una fuerza en el pico capaz de romper las cáscaras más duras de nueces y castañas amazónicas."
+    description: "Ave emblemática del dosel amazónico. El diccionario registra 'arara pɨtani' (guacamayo rojo) y 'arara tsenepuka' (guacamayo azul).",
+    lore: "Vuela en parejas sobre los aguajales ('mɨrɨti') y las copas de los árboles altos ('ɨwɨra').",
+    curiosity: "Su pico posee gran fuerza para abrir semillas y frutos duros de palmeras amazónicas."
   },
   {
-    id: "warakusu",
-    kokama: "Warakusu / Piraruku",
-    phonetic: "[Wa-ra-kú-su]",
+    id: "iwatsu",
+    kokama: "Iwatsu",
+    phonetic: "[i-wa-tsu]",
     spanish: "Paiche (Gigante del Río)",
     scientific: "Arapaima gigas",
     category: "Pez de agua dulce",
     image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
-    description: "El pez de escamas más grande del río Amazonas. Puede superar los 3 metros y 200 kilogramos de peso.",
-    lore: "Los pescadores Kokama le cantan respetuosamente antes de lanzar sus redes para pedir abundancia sin depredar.",
-    curiosity: "Necesita salir a la superficie a respirar aire cada 15 a 20 minutos con un resoplido inconfundible."
+    description: "El pez de escamas más grande de los ríos y cochas amazónicas, nombrado 'iwatsu' en Kukama-Kukamiria.",
+    lore: "Alimento fundamental y símbolo de abundancia en las cochas ('ɨpatsu') de Loreto.",
+    curiosity: "Necesita salir a la superficie del agua ('uni') para respirar aire cada 15 a 20 minutos."
   },
   {
-    id: "yawati",
-    kokama: "Yawatï",
-    phonetic: "[Ya-wa-túh]",
-    spanish: "Charapa / Taricaya",
-    scientific: "Podocnemis expansa",
+    id: "tarikaya",
+    kokama: "Tarikaya / Puka",
+    phonetic: "[ta-ri-ka-ya / pu-ka]",
+    spanish: "Taricaya / Charapa",
+    scientific: "Podocnemis unifilis / expansa",
     category: "Reptil fluvial",
     image: "https://images.unsplash.com/photo-1508817628294-5a453fa0b8fb?auto=format&fit=crop&w=800&q=80",
-    description: "Tortuga acuática emblemática de las playas de arena del río Ucayali y Marañón.",
-    lore: "Símbolo de sabiduría calmada y paciencia para la crianza y el cuidado de las aguas tranquilas.",
-    curiosity: "Las comunidades Kukama lideran planes de conservación de nidadas en playas artificiales para protegerlas."
+    description: "Tortugas acuáticas de las playas del Marañón y Ucayali ('tarikaya' y 'puka'; la tortuga terrestre motelo es 'yawati').",
+    lore: "Las comunidades Kukama participan activamente en el cuidado y conservación de sus playas de anidación.",
+    curiosity: "Sus nidadas en las playas de arena requieren protección frente a crecidas tempranas del río."
   },
   {
     id: "tapira",
     kokama: "Tapira",
-    phonetic: "[Ta-pí-ra]",
+    phonetic: "[ta-pi-ra]",
     spanish: "Sachavaca / Tapir",
     scientific: "Tapirus terrestris",
-    category: "Mamífero de la espesura",
+    category: "Mamífero del monte",
     image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
-    description: "El mayor mamífero terrestre de la selva peruana, gran nadador y dispersor vital de semillas de árboles gigantes.",
-    lore: "En la mitología amazónica, la sachavaca abrió los primeros senderos transitables a través del monte cerrado.",
-    curiosity: "Su trompa flexible es usada como un dedo adicional para tomar hojas tiernas y frutos caídos."
+    description: "El mayor mamífero terrestre de la selva amazónica peruana, gran nadador y dispersor de semillas.",
+    lore: "Habita en lo profundo del monte ('ɨwɨrati') y cruza con destreza quebradas y caños.",
+    curiosity: "Su labio superior flexible funciona como una pequeña trompa para tomar hojas y frutos."
   },
   {
-    id: "kai",
-    kokama: "Ka'i",
-    phonetic: "[Ka-í]",
-    spanish: "Mono Choro / Macaco",
+    id: "arawata",
+    kokama: "Arawata",
+    phonetic: "[a-ra-wa-ta]",
+    spanish: "Mono Choro",
     scientific: "Lagothrix lagothricha",
-    category: "Primate acrobático",
+    category: "Primate amazónico",
     image: "https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=800&q=80",
-    description: "Primate lanudo de cola prensil que habita los árboles altos y alerta a la selva con sus silbidos.",
-    lore: "Se le considera el juguetón compañero de los caminantes solitarios y avisador de tormentas.",
-    curiosity: "Su cola prensil tiene tanta fuerza que puede sostener el peso de todo su cuerpo mientras se alimenta."
+    description: "Primate de cola prensil que habita las copas de los árboles. El diccionario también registra 'akɨkɨ' (mono coto) y 'kuwata' (maquisapa).",
+    lore: "Acompaña el paisaje sonoro del bosque alto en las mañanas de la selva.",
+    curiosity: "Su cola prensil puede sostener todo el peso de su cuerpo mientras se alimenta en las ramas."
   },
   {
-    id: "tukana",
-    kokama: "Tukana",
-    phonetic: "[Tu-ká-na]",
-    spanish: "Tucán de Pecho Blanco",
+    id: "piyakui",
+    kokama: "Piyakui / Aratsari",
+    phonetic: "[pi-ya-kwi / a-ra-tsa-ri]",
+    spanish: "Tucán / Pinsha",
     scientific: "Ramphastos tucanus",
     category: "Ave frugívora",
     image: "https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80",
-    description: "Reconocido por su enorme pico liviano y esponjoso con colores vibrantes.",
-    lore: "Su canto al amanecer indica que el sol 'Kuarachy' bendecirá la siembra y la pesca del día.",
-    curiosity: "Su pico contiene una red de vasos sanguíneos que le ayuda a regular su temperatura corporal en el calor tropical."
+    description: "Reconocido por su pico grande y liviano. En el diccionario figuran 'piyakui' (tucán) y 'aratsari' (tucán pequeño / pinsha).",
+    lore: "Dispersa semillas de frutos silvestres por toda la espesura del bosque.",
+    curiosity: "Su pico contiene una red de vasos sanguíneos que ayuda a regular su temperatura corporal."
   }
 ];
 
 export const natureList = [
-  { kokama: "Uni", phonetic: "[U-ni]", spanish: "Agua / Río", category: "Elemento vital", desc: "El origen de toda la vida y cosmovisión de los Kokama." },
-  { kokama: "Ka'a", phonetic: "[Ka-á]", spanish: "Selva / Monte", category: "Hogar", desc: "El gran bosque que provee medicina, alimento y cobijo." },
-  { kokama: "Kuarachy", phonetic: "[Kwa-ra-chy]", spanish: "Sol", category: "Astro diurno", desc: "El dador de luz, calor y maduración para los frutos del platanar." },
-  { kokama: "Yasy", phonetic: "[Ya-sý]", spanish: "Luna", category: "Astro nocturno", desc: "Guía el calendario de pesca y la siembra en las riberas." },
-  { kokama: "Takuara", phonetic: "[Ta-kwa-ra]", spanish: "Casa / Maloca", category: "Comunidad", desc: "Espacio comunitario donde los sabios transmiten historias." },
-  { kokama: "Yapana", phonetic: "[Ya-pa-na]", spanish: "Canoa tradicional", category: "Navegación", desc: "Tallada en un solo tronco de cedro o cumala para cruzar corrientes." },
-  { kokama: "Irapay", phonetic: "[I-ra-pay]", spanish: "Lupuna (Árbol sagrado)", category: "Flora sagrada", desc: "El árbol más colosal del bosque amazónico, morada de espíritus." },
-  { kokama: "Aguaje", phonetic: "[A-gwa-ye]", spanish: "Fruto de la palmera moriche", category: "Alimento", desc: "El fruto reina de la selva de Loreto, rico en vitaminas y vitalidad." },
-  { kokama: "Churi", phonetic: "[Chu-ri]", spanish: "Niño / Hija o hijo pequeño", category: "Familia", desc: "Los portadores del futuro de la lengua y los cantos ancestrales." },
-  { kokama: "Taita / Paje", phonetic: "[Tai-ta / Pa-je]", spanish: "Sabio / Chamán sanador", category: "Sabiduría", desc: "Guardián de los cantos 'Ícaros' y la medicina tradicional de plantas." },
-  { kokama: "Irapatse", phonetic: "[I-ra-pat-se]", spanish: "Gratitud profunda", category: "Espiritualidad", desc: "Reconocer con el corazón los dones recibidos del río y la selva." },
-  { kokama: "Kukama Ikuan", phonetic: "[Ku-ka-ma I-kwan]", spanish: "Sabiduría del pueblo Kukama", category: "Lema", desc: "El camino del conocimiento vivo y la memoria colectiva." }
+  { kokama: "Uni", phonetic: "[u-ni]", spanish: "Agua", category: "Elemento vital", desc: "Base de la vida y del mundo fluvial del pueblo Kukama-Kukamiria." },
+  { kokama: "Parana", phonetic: "[pa-ra-na]", spanish: "Río", category: "Geografía", desc: "Los grandes ríos amazónicos; 'parana nuan' designa al río Amazonas." },
+  { kokama: "Ɨwɨrati", phonetic: "[ɨ-wɨ-ra-ti]", spanish: "Selva / Monte", category: "Territorio", desc: "El gran bosque que provee alimento, madera, plantas y refugio." },
+  { kokama: "Kuarachi", phonetic: "[kwa-ra-chi]", spanish: "Sol / Cielo", category: "Astro", desc: "Luz y calor del día que acompaña las faenas de la chacra ('ku') y la pesca." },
+  { kokama: "Yatsɨ", phonetic: "[ya-tsɨ]", spanish: "Luna / Mes", category: "Astro nocturno", desc: "Marca el paso de los meses y los ciclos de la naturaleza." },
+  { kokama: "Uka", phonetic: "[u-ka]", spanish: "Casa", category: "Hogar", desc: "Espacio familiar donde se transmite la lengua y la memoria." },
+  { kokama: "Ɨara", phonetic: "[ɨ-a-ra]", spanish: "Canoa", category: "Navegación", desc: "Embarcación tradicional impulsada con el remo ('yapukita')." },
+  { kokama: "Mɨrɨti", phonetic: "[mɨ-rɨ-ti]", spanish: "Aguaje", category: "Flora amazónica", desc: "Palmera emblemática y fruto fundamental de la dieta amazónica." },
+  { kokama: "Ɨwɨra", phonetic: "[ɨ-wɨ-ra]", spanish: "Árbol / Palo", category: "Flora", desc: "Ser del monte que sostiene la vida del bosque amazónico." },
+  { kokama: "Tsumi", phonetic: "[tsu-mi]", spanish: "Curandero / Chamán", category: "Sabiduría", desc: "Especialista tradicional en curaciones y conocimiento espiritual." },
+  { kokama: "Yutsurpaki", phonetic: "[yu-tsur-pa-ki]", spanish: "Gracias", category: "Gratitud", desc: "Palabra de agradecimiento registrada en el diccionario oficial." },
+  { kokama: "Ikuan", phonetic: "[i-kwan]", spanish: "Sabio", category: "Conocimiento", desc: "Persona portadora de conocimiento ('ikua' = saber, conocer)." }
 ];
 
 export const storiesData = [
   {
     id: "bufeo-colorado",
-    title: "El Secreto del Bufeo Colorado",
-    kokamaTitle: "Wapuri Yurimawa Ikuashawa",
-    badge: "Mito Fluvial de Nauta",
+    title: "El Bufeo Colorado y los Seres del Agua",
+    kokamaTitle: "Ipirawira pɨtani · Karuara",
+    badge: "Relato Fluvial (Ɨmɨntsara)",
     river: "Río Marañón / Loreto",
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    summary: "El misterioso habitante de las profundidades del río que danza en las noches de fiesta patronal y recuerda a los humanos nunca olvidar el respeto a las aguas vivas.",
-    kokamaExcerpt: "Wapuri tsupi uni yara. Aipana tsuni yupuni, aipana pua yapana yawé, yuka churi ta tsupi katu...",
-    spanishExcerpt: "El Bufeo Colorado es el dueño sereno del agua. Al caer la noche de luna llena, sube a la orilla luciendo un sombrero de paja para ocultar su secreto y celebrar con los pueblos ribereños.",
-    fullStoryKokama: `Aipana tsupi kuarachy yaika pe, Wapuri weve uni tsuni pe.
-Kukama ta ikua: Wapuri ima tsupi paje katu. Aipana pura kuachi tsupi yapana ari.
-Yasy pukú pe, Wapuri pua yuka teta pe. Oyuwa tapiira tsaputa, oñeme'ẽ sombreru katu.
-Purukara katu ti, kachi katu churi ta tsupi.
-Ipuku uni pe ojevy, yapana ta omonheta: 'Ekatia uni, emondo respeto parana pe'.`,
-    fullStorySpanish: `En las curvas misteriosas del río Marañón, donde el agua parece un espejo negro bajo los sauces y renacos, habita Wapuri, el delfín rosado de agua dulce.
-Los antiguos abuelos Kukama enseñan que Wapuri no es un pez común, sino un navegante encantado de las ciudades sumergidas.
-En las noches de luna clara, sale a las playas de Nauta vestido como un forastero elegante, baila con alegría contagiante y comparte relatos del fondo de la laguna.
-Al llegar el canto del primer gallo, retorna siempre al río, recordándonos una ley inquebrantable: 'Quien cuida el agua viva, cuida el corazón de su propia familia'.`,
-    moral: "El respeto incondicional por los ríos y los seres que habitan el mundo subacuático (Uni Yara)."
-  },
-  {
-    id: "lupuna-madre",
-    title: "La Gran Lupuna y el Origen de las Aguas",
-    kokamaTitle: "Irapay Tsaputa Parana Yupuni",
-    badge: "Leyenda Cosmológica",
-    river: "Cuenca Pacaya Samiria",
-    image: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1200&q=80",
-    summary: "Cómo el árbol más gigante de la Amazonía albergaba en su copa las aguas primigenias que dieron nacimiento a los ríos Marañón y Ucayali.",
-    kokamaExcerpt: "Irapay puku katu yupuni. Yvaga pe oporavy, uni opaite oĩ ipo pe...",
-    spanishExcerpt: "La colosal Lupuna tocaba el cielo con su copa. En sus ramas descansaban las primeras lluvias que llenaron las cuencas de la Amazonía peruana.",
-    fullStoryKokama: `Irapay ima tuichaiterei ka'a mbyte pe.
-Ymaite, uni ndaipóri yvy ari: opaite uni oĩ yvaga pe, Irapay rakã ari.
-Kukama ta kuimba'e ha kuña ojerure tupan pe: 'Mondo uni oreve, ore memby ta yuhéi'.
-Upépe, yvytu hatã oipeju, Irapay rakã opẽ, ha uni osyry tsupi: Marañón, Ucayali ha Amazonas oñepyrũ oiko.
-Ko'ápeve, Irapay opyta ka'a yara ramo.`,
-    fullStorySpanish: `Cuentan los abuelos que en el principio de los tiempos la tierra era árida y la gente caminaba con sed buscando manantiales.
-En el centro del monte crecía una Lupuna gigantesca llamada Irapay, tan ancha que hacían falta veinte personas tomadas de la mano para rodear su tallo.
-En lo más alto de sus ramas verdes se encontraba una laguna celestial guardada por aves sagradas.
-Cuando los jóvenes Kukama aprendieron a cantar con humildad pidiendo la bendición del agua, una suave brisa inclinó las ramas de la Lupuna y derramó los cauces que hoy forman el río Marañón y el Ucayali.
-Por eso, cada vez que un árbol de Lupuna es visto en la orilla, la gente guarda silencio en señal de reverencia.`,
-    moral: "La generosidad de los árboles protectores y el agua como herencia sagrada para todos los seres."
+    summary: "En los relatos tradicionales ('ɨmɨntsara'), el bufeo colorado ('ipirawira pɨtani') y los 'karuara' habitan las profundidades del río y las cochas.",
+    kokamaExcerpt: "Ipirawira pɨtani · Parana · Ɨpatsu · Karuara · Ipira mama",
+    spanishExcerpt: "Vocablos del relato en el diccionario: ipirawira pɨtani (bufeo colorado), parana (río), ɨpatsu (cocha), karuara (yacuruna), ipira mama (sirena).",
+    fullStoryKokama: `Vocabulario auténtico del relato (Diccionario Kukama-Kukamiria):
+
+• Ɨmɨntsara: cuento, relato tradicional.
+• Ipirawira pɨtani: bufeo colorado (ipirawira tsawe = bufeo cenizo).
+• Parana: río · Ɨpatsu: cocha · Tɨmatsa: caño, quebrada.
+• Karuara: yacuruna, ser mítico que habita en las profundidades del agua.
+• Ipira mama: sirena.
+• Ɨara: canoa · Yapukita: remo.
+
+Frase del diccionario:
+"Kukama aitsemekatun ini kumitsa."
+(El kukama es nuestra verdadera lengua.)`,
+    fullStorySpanish: `En las curvas del río Marañón ('parana'), en las cochas ('ɨpatsu') y quebradas ('tɨmatsa'), habita el bufeo colorado ('ipirawira pɨtani').
+La tradición oral ('ɨmɨntsara') de los abuelos Kukama-Kukamiria enseña que bajo las aguas existen seres espirituales como los 'karuara' (yacurunas) y la 'ipira mama' (sirena).
+Quien navega en su canoa ('ɨara') con su remo ('yapukita') debe guardar respeto por el agua ('uni') y por la vida que habita en ella.`,
+    moral: "Respetar las aguas ('uni'), las cochas ('ɨpatsu') y a los seres que habitan el río ('parana')."
   },
   {
     id: "yacumama",
     title: "La Yacumama, Madre de las Aguas",
-    kokamaTitle: "Yacumama Uni Sy",
-    badge: "Guardián de la Selva",
-    river: "Río Ucayali / Lagunas Sagradas",
+    kokamaTitle: "Parana mama / Uni mama",
+    badge: "Guardián de las Cochas",
+    river: "Río Ucayali / Pacaya Samiria",
     image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=80",
-    summary: "La gigantesca serpiente protectora de las lagunas vírgenes que asegura que los peces se reproduzcan y nadie extraiga más de lo necesario.",
-    kokamaExcerpt: "Yacumama parana sy, tuicha mbói tsupi katu oĩ uni guype...",
-    spanishExcerpt: "La gran madre boa yace en el fondo de las cochas profundas. Cuando los pescadores actúan con codicia, un remolino les advierte volver a la orilla.",
-    fullStoryKokama: `Yacumama oiko yno'õ pypuku pe.
-Ima tuichaiterei, ipire hovy ha overa kuarahy rendy pe.
-Ha'e oñangareko pira kuéra ari: warakusu, yawatï ha piraña.
-Pescador oñembyaty ramo pira tekotevẽva añoite, Yacumama oheja chupekuéra osẽ porã.
-Ha katu oĩ ramo oñembosaráiva ha ojuka reíva, parana opu'ã yvytu ndive ha omoĩ orden.`,
-    fullStorySpanish: `En las cochas más silenciosas de la selva baja de Loreto, donde las hojas de victoria regia flotan gigantescas, duerme la Yacumama, la gran serpiente madre del agua.
-Mide decenas de metros y su lomo se confunde con los troncos caídos cubiertos de musgo.
-Ella no es enemiga de los pescadores justos; al contrario, guía a los cardúmenes de paiche y gamitana hacia las canoas de quienes tienen familias con hambre.
-Pero cuando algún pescador codicioso intenta saquear la laguna o arroja desperdicios al agua limpia, la Yacumama bate su cola colosal creando oleajes altos que alejan las lanchas.
-Los niños Kokama aprenden desde pequeños: 'Nunca tires suciedad al río; la Madre del Agua siempre observa'.`,
-    moral: "La sostenibilidad ecológica ancestral: tomar de la naturaleza solo lo necesario con gratitud."
+    summary: "La gran madre protectora de los ríos ('parana mama') y del agua ('uni mama'), ligada a la anaconda ('ɨwɨrati tsukuri') y al cuidado de los peces.",
+    kokamaExcerpt: "Parana mama · Uni mama · Ɨwɨrati tsukuri · Iwatsu · Tarikaya",
+    spanishExcerpt: "Vocablos del relato: parana mama / uni mama (yacumama), ɨwɨrati tsukuri (anaconda), iwatsu (paiche), tarikaya (taricaya).",
+    fullStoryKokama: `Vocabulario auténtico del relato (Diccionario Kukama-Kukamiria):
+
+• Parana mama / Uni mama: yacumama, madre del río y del agua.
+• Tsukuri: boa constructora · Ɨwɨrati tsukuri: anaconda.
+• Iwatsu: paiche · Kirimata: boquichico · Tsuri: doncella.
+• Tarikaya: taricaya · Puka: charapa.
+• Uni: agua · Parana: río.
+
+Frase del diccionario:
+"Etse tseta ikua kumitsa kukama."
+(Yo quiero aprender a hablar kukama.)`,
+    fullStorySpanish: `En las cochas profundas de la selva baja de Loreto descansa la 'parana mama' o 'uni mama' (la Yacumama, madre del agua).
+En el imaginario amazónico, se asocia con la gran boa del agua o anaconda ('ɨwɨrati tsukuri') que protege el equilibrio de peces como el paiche ('iwatsu'), el boquichico ('kirimata'), la doncella ('tsuri') y las tortugas como la 'tarikaya' y la 'puka'.
+Los mayores enseñan que debemos tomar del río solo lo necesario y cuidar la limpieza del agua ('uni').`,
+    moral: "Cuidar los ríos y cochas tomando de la naturaleza solo lo necesario con respeto."
   },
   {
-    id: "chullachaqui",
-    title: "El Chullachaqui, Protector del Monte",
-    kokamaTitle: "Chullachaqui Ka'a Yara",
-    badge: "Misterio Amazónico",
-    river: "Bosques de Requena y Nauta",
+    id: "selva-viva",
+    title: "El Monte y la Voz del Ayaymama",
+    kokamaTitle: "Ɨwɨrati · Uruta",
+    badge: "Tradición del Bosque",
+    river: "Cuencas de Nauta y Requena",
     image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80",
-    summary: "El pequeño guardián del bosque con pies diferentes que cuida los senderos y prueba el corazón de los viajeros.",
-    kokamaExcerpt: "Chullachaqui peteĩ ipy yvypóra ha ambue mymba py, ka'a mboyve...",
-    spanishExcerpt: "Tiene una huella humana y otra de sachavaca o venado. Aquel que tala árboles sin pedir permiso se pierde en su laberinto de lianas.",
-    fullStoryKokama: `Ka'a pypuku pe oiko peteĩ karai michĩva: Chullachaqui.
-Peteĩ ipy tsupi yvypóra py yawé, ha ambue katu tapira py.
-Ha'e oikuaa opaite yvyrarakã, opaite ka'avo pohã rehegua.
-Ndoipotái avave oity yvyra reírei. Oimérõ peteĩ ombyaíva ka'a, Chullachaqui ombopy'atarova chupe tape pe.`,
-    fullStorySpanish: `En la densa floresta de la selva peruana, el guardián más temido por los cazadores deshonestos es el Chullachaqui.
-Su nombre proviene de su particularidad física: una de sus piernas tiene pie humano y la otra es la pata de un tapir o un venado de monte.
-Es capaz de tomar la apariencia de un primo, hermano o vecino para llamar al caminante hacia lo más profundo de las trochas.
-Si el viajero mira al suelo y descubre la huella desigual, rompe el hechizo de inmediato.
-Los abuelos sabios enseñan que el Chullachaqui no es malvado: es el fiscalizador que la Pachamama puso para que los madereros ilegales no dejen sin sombra a los animales.`,
-    moral: "El respeto a los límites de la selva y la necesidad de conservar los bosques vírgenes."
+    summary: "El canto nocturno del ave 'uruta' (ayaymama) en la espesura del monte ('ɨwɨrati') y la relación espiritual con los árboles ('ɨwɨra').",
+    kokamaExcerpt: "Ɨwɨrati · Ɨwɨra · Uruta · Aɨmanta · Tapira",
+    spanishExcerpt: "Vocablos del relato: ɨwɨrati (selva/monte), ɨwɨra (árbol), uruta (ayaymama), aɨmanta (otorongo), tapira (sachavaca).",
+    fullStoryKokama: `Vocabulario auténtico del relato (Diccionario Kukama-Kukamiria):
+
+• Ɨwɨrati: selva, monte · Ɨwɨra: árbol, palo.
+• Uruta: ayaymama (ave nocturna amazónica).
+• Aɨmanta: otorongo · Tapira: sachavaca.
+• Amana: lluvia · Ɨwɨtu: viento, aire.
+• Yatsɨ: luna · Tsetsu: estrella.
+
+Frase del diccionario:
+"Ini tseta ikua kuatiaraka kukamapu."
+(Queremos aprender a escribir en kukama.)`,
+    fullStorySpanish: `Cuando cae la noche bajo la luna ('yatsɨ') y las estrellas ('tsetsu'), resuena en lo alto de los árboles ('ɨwɨra') el canto melancólico del 'uruta' (ayaymama).
+El monte ('ɨwɨrati') es hogar del otorongo ('aɨmanta'), la sachavaca ('tapira') y muchas aves que anuncian la lluvia ('amana') y el viento ('ɨwɨtu').
+Escuchar sus sonidos es recordar los relatos ('ɨmɨntsara') transmitidos por las abuelas y los abuelos en cada comunidad ('ritama').`,
+    moral: "El respeto por la selva ('ɨwɨrati') y por cada ser vivo que la habita."
+  },
+  {
+    id: "sabiduria-comunidad",
+    title: "La Minga y la Palabra de los Sabios",
+    kokamaTitle: "Wayuri · Ikuan · Ritama",
+    badge: "Vida Comunitaria",
+    river: "Loreto, Perú",
+    image: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1200&q=80",
+    summary: "El trabajo colectivo ('wayuri') en la chacra ('ku') y la transmisión de la lengua por los sabios ('ikuan') en la comunidad ('ritama').",
+    kokamaExcerpt: "Wayuri · Ikuan · Ritama · Ku · Kaitsuma · Yutsurpaki",
+    spanishExcerpt: "Vocablos del relato: wayuri (minga), ikuan (sabio), ritama (comunidad), ku (chacra), kaitsuma (masato), yutsurpaki (gracias).",
+    fullStoryKokama: `Vocabulario auténtico del relato (Diccionario Kukama-Kukamiria):
+
+• Wayuri: minga, trabajo colectivo comunitario.
+• Ikuan: sabio · Tsumi: curandero, chamán.
+• Ritama: comunidad, pueblo · Awa: persona.
+• Ku: chacra · Yawiri: yuca · Awati: maíz.
+• Kaitsuma: masato · Yutsurpaki: gracias.
+
+Saludo tradicional:
+"Era kuemataka! Maniawatipa na yuti?" — "Ni mania."
+(¡Buen día! ¿Cómo estás? — Ahí bien.)`,
+    fullStorySpanish: `En cada comunidad ('ritama'), las familias se reúnen en 'wayuri' (minga) para limpiar la chacra ('ku'), sembrar yuca ('yawiri') y maíz ('awati'), y compartir el masato ('kaitsuma') al terminar la jornada.
+En estos encuentros, los sabios ('ikuan') conversan en Kukama-Kukamiria para que los jóvenes escuchen los saludos ('Era kuemataka', 'Tsaniuri') y mantengan viva la lengua materna.
+Al despedirse con gratitud, dicen 'Yutsurpaki' (gracias).`,
+    moral: "La fuerza de la comunidad ('ritama') y la transmisión viva de la lengua entre generaciones."
   }
 ];
 
 export const gamesQuizData = [
   {
     id: 1,
-    question: "¿Qué significa el nombre 'Ikua' en la lengua Kokama?",
+    question: "¿Qué significa el verbo 'ikua' en el Diccionario Kukama-Kukamiria?",
     options: [
-      "Saber, aprender o conocer",
-      "Río de oro",
+      "Saber, conocer o ser hábil",
+      "Río caudaloso",
       "Canoa veloz",
-      "Árbol de flores"
+      "Árbol de aguaje"
     ],
     correct: 0,
-    explanation: "'Ikua' (o 'Ikwa') expresa el acto de saber, conocer o tener sabiduría comunitaria."
+    explanation: "En el diccionario oficial, 'ikua' significa 'saber, conocer / ser hábil', y 'ikuan' significa 'sabio'."
   },
   {
     id: 2,
-    question: "¿Cómo se dice el número 'UNO' en Kokama?",
-    options: ["Mukuika", "Wepɨ", "Motsapɨr", "Chunka"],
+    question: "¿Cómo se dice el número 'UNO' en Kukama-Kukamiria?",
+    options: ["Mukuika", "Wepe", "Mutsapɨrɨka", "Chunka"],
     correct: 1,
-    explanation: "'Wepɨ' es el número uno, pronunciado con la singular vocal central 'ɨ'."
+    explanation: "'Wepe' es el número uno en Kukama-Kukamiria."
   },
   {
     id: 3,
-    question: "¿Qué animal es 'Yawar' en la Amazonía peruana?",
-    options: ["El Otorongo / Jaguar", "El Guacamayo", "El Delfín Rosado", "La Nutria"],
+    question: "¿Qué animal es 'Aɨmanta' (o 'Yawara parawa') en el diccionario?",
+    options: ["El Otorongo / Tigre", "El Guacamayo", "El Bufeo Colorado", "La Nutria"],
     correct: 0,
-    explanation: "'Yawar' designa al felino más poderoso de la selva baja: el jaguar u otorongo."
+    explanation: "'Aɨmanta' y 'yawara parawa' designan al otorongo o jaguar amazónico."
   },
   {
     id: 4,
-    question: "¿Cuál es el saludo cotidiano en Kokama equivalente a 'Hola / Buenos días'?",
-    options: ["Irapatse", "Etepe", "Katu ti", "Takuara"],
+    question: "¿Qué significa el saludo 'Era kuemataka' en Kukama-Kukamiria?",
+    options: ["Gracias", "Buen día (en cualquier momento del día)", "Ahí bien", "Casa"],
     correct: 1,
-    explanation: "'Etepe' es el saludo cálido y tradicional de bienvenida y encuentro."
+    explanation: "'Era kuemataka' es el saludo para 'buen día', usado en cualquier momento del día."
   },
   {
     id: 5,
-    question: "¿A qué familia lingüística pertenece la lengua Kukama-Kukamiria?",
-    options: ["Pano", "Arawak", "Tupí-Guaraní", "Quechua"],
-    correct: 2,
-    explanation: "El Kokama pertenece a la rama Tupí-Guaraní, emparentada con pueblos navegantes milenarios."
+    question: "¿Cuántas grafías tiene el alfabeto oficial Kukama-Kukamiria (FORMABIAP)?",
+    options: ["12 grafías", "17 grafías", "24 grafías", "27 grafías"],
+    correct: 1,
+    explanation: "El alfabeto oficial consta de 17 grafías: a, ch, e, i, ɨ, j, k, m, n, p, r, sh, t, ts, u, w, y."
   },
   {
     id: 6,
-    question: "¿Qué significa literalmente 'Mukuika Po' (el número 10)?",
-    options: ["Dos canoas", "Dos manos completas", "Cinco soles", "Diez pescados"],
+    question: "¿Cómo se dice el número 'DIEZ' en Kukama-Kukamiria?",
+    options: ["Pichka", "Chunka", "Kantsi", "Iruaka"],
     correct: 1,
-    explanation: "'Mukuika' (dos) y 'Po' (mano): diez dedos, las dos manos juntas."
+    explanation: "'Chunka' significa diez. Por ejemplo, 'mukuika chunka' es veinte."
   },
   {
     id: 7,
-    question: "¿Cómo se llama el mítico Delfín Rosado en Kokama?",
-    options: ["Wapuri / Ipurapari", "Warakusu", "Yawatï", "Tapira"],
+    question: "¿Cómo se llama el Bufeo Colorado en Kukama-Kukamiria?",
+    options: ["Ipirawira pɨtani", "Iwatsu", "Tarikaya", "Tapira"],
     correct: 0,
-    explanation: "'Wapuri' es el legendario bufeo colorado que protege los ríos de Pacaya Samiria."
+    explanation: "'Ipirawira' es bufeo y 'pɨtani' es colorado/rojo: 'ipirawira pɨtani'."
   },
   {
     id: 8,
-    question: "¿Qué palabra se utiliza para decir 'Muchas gracias' en Kokama?",
-    options: ["Mai katu", "Irapatse", "Uni", "Parana"],
+    question: "¿Qué palabra se usa para decir 'Gracias' en Kukama-Kukamiria?",
+    options: ["Tsaniuri", "Yutsurpaki", "Uni", "Parana"],
     correct: 1,
-    explanation: "'Irapatse' es la bella palabra para manifestar gratitud de corazón."
+    explanation: "'Yutsurpaki' significa 'gracias' (también se usa 'ainan ta' / 'ainan etse')."
   }
 ];
 
 export const cultureInfo = [
   {
     id: "historia",
-    title: "La Gente del Agua (Gente de Río)",
+    title: "La Gente del Agua y la Canoa (Ɨara)",
     tag: "Origen Histórico",
     icon: "🛶",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    content: "Los Kukama-Kukamiria son descendientes de grandes navegantes de la familia Tupí-Guaraní que migraron hace siglos remontando los ríos amazónicos hasta asentarse en las ricas llanuras aluviales de Loreto, donde el Marañón y el Ucayali se unen para alumbrar al colosal río Amazonas.",
+    content: "Los Kukama-Kukamiria son descendientes de grandes navegantes de la familia lingüística Tupí-Guaraní asentados en las llanuras aluviales de Loreto, a lo largo de los ríos ('parana') Marañón, Ucayali, Huallaga, Tigre y Amazonas ('parana nuan').",
     highlights: [
-      "Maestros en la construcción de canoas de un solo leño ('yapana')",
-      "Conocimiento profundo de las crecientes y vaciantes del río",
-      "Asentamientos estratégicos en Nauta, Requena y Pacaya Samiria"
+      "Navegación tradicional en canoa ('ɨara') con remo ('yapukita')",
+      "Conocimiento profundo de cochas ('ɨpatsu') y quebradas ('tɨmatsa')",
+      "Comunidades ('ritama') en Nauta, Requena y la cuenca del Pacaya Samiria"
     ]
   },
   {
     id: "cosmovision",
-    title: "Los Tres Mundos y la Vida Submarina",
-    tag: "Espiritualidad Ancestral",
+    title: "El Agua, los Karuara y la Selva (Ɨwɨrati)",
+    tag: "Cosmovisión Fluvial",
     icon: "🌊",
     image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80",
-    content: "En la cosmovisión Kokama, el cosmos está integrado por el Mundo de Arriba (Yvaga / cielo), el Mundo del Medio (este suelo donde sembramos y caminamos) y el Mundo de Abajo (Uni Yara / el mundo de las aguas). En el fondo de los ríos existen ciudades hermosas habitadas por los 'espíritus del agua'.",
+    content: "En la tradición oral ('ɨmɨntsara') Kukama-Kukamiria, el agua ('uni') y el río ('parana') están habitados por seres espirituales como los 'karuara' (yacurunas), la 'ipira mama' (sirena) y la 'parana mama' o 'uni mama' (yacumama).",
     highlights: [
-      "El agua no es un recurso inerte, es un ser vivo dotado de madre ('Sy')",
-      "Respeto sagrado a las lagunas vírgenes y bosques inundables (tahuampas)",
-      "Vínculo simbiótico entre medicina vegetal e Ícaros curativos"
+      "El agua ('uni') y los árboles ('ɨwɨra') requieren respeto comunitario",
+      "Sabiduría medicinal guiada por los curanderos ('tsumi') y sabios ('ikuan')",
+      "Relatos orales ('ɨmɨntsara') que transmiten normas de cuidado ambiental"
     ]
   },
   {
-    id: "artesania",
-    title: "Cerámica, Tintes Naturales y Cestería",
-    tag: "Arte y Diseño",
-    icon: "🏺",
+    id: "lengua",
+    title: "Habla Femenina (DF) y Masculina (DM)",
+    tag: "Rasgo Lingüístico Único",
+    icon: "🗣️",
     image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80",
-    content: "Las mujeres Kukama son renombradas por moldear tinajas ceremoniales de arcilla pura con pigmentos minerales: rojo de achiote, negro de carbón y blanco de caolín. Los motivos geométricos simbolizan las escamas de la boa, el flujo de las corrientes y la piel del jaguar.",
+    content: "Una característica fascinante del Kukama-Kukamiria documentada en el diccionario es la distinción entre el discurso femenino (DF) y el masculino (DM) en pronombres y demostrativos.",
     highlights: [
-      "Tejido en fibra de chambira para hamacas y bolsos resistentes",
-      "Pinturas de motivos fluviales que narran mapas espirituales",
-      "Uso de resinas de árboles amazónicos para impermeabilizar vasijas"
+      "Primera persona 'yo': 'tsa / etse' (DF) frente a 'ta' (DM)",
+      "Respuestas de saludo: 'Era tsa kuema' (mujer) frente a 'Era ta kuema' (hombre)",
+      "Demostrativo 'este': 'ajan' (DF) frente a 'ikian' (DM)"
     ]
   },
   {
@@ -480,160 +533,160 @@ export const cultureInfo = [
     tag: "Resistencia Cultural",
     icon: "📻",
     image: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80",
-    content: "Hoy en día, emisoras comunitarias como Radio Ucamara en Nauta, escuelas bilingües interculturales (EIB) y colectivos de jóvenes artistas rapean, cantan y producen audiovisuales en Kokama para transmitir a las nuevas generaciones el orgullo de su voz milenaria.",
+    content: "Hoy en día, escuelas de Educación Intercultural Bilingüe (EIB), proyectos como FORMABIAP y AIDESEP, radios comunitarias como Radio Ucamara en Nauta y herramientas digitales como Ikua impulsan la enseñanza del Kukama-Kukamiria.",
     highlights: [
-      "Grabación de canciones tradicionales como 'Kumbarikira'",
-      "Talleres intergeneracionales entre sabios abuelos y escolares",
-      "Inclusión de materiales didácticos digitales como Ikua"
+      "Uso de materiales oficiales como el Diccionario Kukama-Kukamiria * Castellano",
+      "Talleres intergeneracionales entre sabios ('ikuan') y jóvenes",
+      "Trabajo colectivo ('wayuri') para preservar la memoria oral"
     ]
   }
 ];
 
-// --- DATOS PARA LOS NUEVOS MINIJUEGOS ---
+// --- DATOS PARA LOS MINIJUEGOS ---
 
 // 1. Minijuego: Navegante del Marañón (Atrapa el Vocablo)
 export const riverMissionData = [
   {
     id: 1,
-    mission: "¡La corriente se agita! Atrapa al PEZ GIGANTE de Pacaya Samiria:",
+    mission: "¡La corriente se agita! Atrapa al PEZ GIGANTE de las cochas:",
     targetHint: "Pez de escamas colosal que respira aire",
-    correctKokama: "Warakusu",
+    correctKokama: "Iwatsu",
     correctSpanish: "Paiche",
     icon: "🐟",
     options: [
-      { text: "Warakusu", icon: "🐟", isCorrect: true },
-      { text: "Yawar", icon: "🐆", isCorrect: false },
+      { text: "Iwatsu", icon: "🐟", isCorrect: true },
+      { text: "Aɨmanta", icon: "🐆", isCorrect: false },
       { text: "Arara", icon: "🦜", isCorrect: false },
-      { text: "Yawatï", icon: "🐢", isCorrect: false }
+      { text: "Tarikaya", icon: "🐢", isCorrect: false }
     ]
   },
   {
     id: 2,
-    mission: "¡Aparecen huellas en la orilla! Atrapa al FELINO SAGRADO del monte:",
-    targetHint: "El gran cazador y protector de los árboles",
-    correctKokama: "Yawar",
-    correctSpanish: "Jaguar / Otorongo",
+    mission: "¡Aparecen huellas en la orilla! Atrapa al OTORONGO del monte:",
+    targetHint: "El gran felino amazónico (aɨmanta)",
+    correctKokama: "Aɨmanta",
+    correctSpanish: "Otorongo / Tigre",
     icon: "🐆",
     options: [
-      { text: "Wapuri", icon: "🐬", isCorrect: false },
-      { text: "Yawar", icon: "🐆", isCorrect: true },
+      { text: "Ipirawira", icon: "🐬", isCorrect: false },
+      { text: "Aɨmanta", icon: "🐆", isCorrect: true },
       { text: "Tapira", icon: "🦛", isCorrect: false },
-      { text: "Ka'i", icon: "🐒", isCorrect: false }
+      { text: "Arawata", icon: "🐒", isCorrect: false }
     ]
   },
   {
     id: 3,
     mission: "¡Cuenta las canoas del puerto! Atrapa el número TRES:",
-    targetHint: "Número impar de la trinidad amazónica",
-    correctKokama: "Motsapɨr",
+    targetHint: "Incluye la vocal central 'ɨ' dos veces",
+    correctKokama: "Mutsapɨrɨka",
     correctSpanish: "Tres",
     icon: "3️⃣",
     options: [
-      { text: "Wepɨ", icon: "1️⃣", isCorrect: false },
+      { text: "Wepe", icon: "1️⃣", isCorrect: false },
       { text: "Mukuika", icon: "2️⃣", isCorrect: false },
-      { text: "Motsapɨr", icon: "3️⃣", isCorrect: true },
+      { text: "Mutsapɨrɨka", icon: "3️⃣", isCorrect: true },
       { text: "Iruaka", icon: "4️⃣", isCorrect: false }
     ]
   },
   {
     id: 4,
-    mission: "¡Un remolino mágico en el río! Atrapa al DELFÍN ROSADO:",
-    targetHint: "Espíritu mítico de las cochas de Nauta",
-    correctKokama: "Wapuri",
+    mission: "¡Un remolino en el río! Atrapa al BUFEO COLORADO:",
+    targetHint: "Delfín rosado de los ríos y cochas",
+    correctKokama: "Ipirawira pɨtani",
     correctSpanish: "Bufeo Colorado",
     icon: "🐬",
     options: [
-      { text: "Tukana", icon: "🦤", isCorrect: false },
-      { text: "Wapuri", icon: "🐬", isCorrect: true },
-      { text: "Warakusu", icon: "🐟", isCorrect: false },
+      { text: "Piyakui", icon: "🦤", isCorrect: false },
+      { text: "Ipirawira pɨtani", icon: "🐬", isCorrect: true },
+      { text: "Iwatsu", icon: "🐟", isCorrect: false },
       { text: "Tapira", icon: "🦛", isCorrect: false }
     ]
   },
   {
     id: 5,
-    mission: "¡El primer rayo de sol del día! Atrapa el número UNO:",
-    targetHint: "El inicio de la cuenta con la vocal ɨ",
-    correctKokama: "Wepɨ",
+    mission: "¡El inicio de la cuenta! Atrapa el número UNO:",
+    targetHint: "Primera unidad numérica del diccionario",
+    correctKokama: "Wepe",
     correctSpanish: "Uno",
     icon: "1️⃣",
     options: [
-      { text: "Wepɨ", icon: "1️⃣", isCorrect: true },
+      { text: "Wepe", icon: "1️⃣", isCorrect: true },
       { text: "Pichka", icon: "5️⃣", isCorrect: false },
-      { text: "Sokta", icon: "6️⃣", isCorrect: false },
-      { text: "Kanchis", icon: "7️⃣", isCorrect: false }
+      { text: "Tsukta", icon: "6️⃣", isCorrect: false },
+      { text: "Kantsi", icon: "7️⃣", isCorrect: false }
     ]
   },
   {
     id: 6,
-    mission: "¡Una criatura nada con paciencia en el remanso! Atrapa a la TORTUGA FLUVIAL:",
-    targetHint: "Símbolo de longevidad en las playas del Ucayali",
-    correctKokama: "Yawatï",
-    correctSpanish: "Charapa / Taricaya",
+    mission: "¡Nada con calma en el remanso! Atrapa a la TARICAYA:",
+    targetHint: "Tortuga acuática de las playas del río",
+    correctKokama: "Tarikaya",
+    correctSpanish: "Taricaya",
     icon: "🐢",
     options: [
       { text: "Arara", icon: "🦜", isCorrect: false },
-      { text: "Ka'i", icon: "🐒", isCorrect: false },
-      { text: "Yawatï", icon: "🐢", isCorrect: true },
-      { text: "Yawar", icon: "🐆", isCorrect: false }
+      { text: "Arawata", icon: "🐒", isCorrect: false },
+      { text: "Tarikaya", icon: "🐢", isCorrect: true },
+      { text: "Aɨmanta", icon: "🐆", isCorrect: false }
     ]
   },
   {
     id: 7,
-    mission: "¡Las dos manos completas de la comunidad! Atrapa el número DIEZ:",
-    targetHint: "Literalmente 'dos manos completas' (mukuika po)",
-    correctKokama: "Mukuika Po",
+    mission: "¡Cuenta completa! Atrapa el número DIEZ:",
+    targetHint: "Base decimal del sistema numérico",
+    correctKokama: "Chunka",
     correctSpanish: "Diez",
     icon: "🔟",
     options: [
-      { text: "Wepɨ Po", icon: "5️⃣", isCorrect: false },
-      { text: "Mukuika Po", icon: "🔟", isCorrect: true },
-      { text: "Iskon", icon: "9️⃣", isCorrect: false },
-      { text: "Pusak", icon: "8️⃣", isCorrect: false }
+      { text: "Pichka", icon: "5️⃣", isCorrect: false },
+      { text: "Chunka", icon: "🔟", isCorrect: true },
+      { text: "Itskun", icon: "9️⃣", isCorrect: false },
+      { text: "Putsa", icon: "8️⃣", isCorrect: false }
     ]
   }
 ];
 
-// 2. Minijuego: Armador Sagrado (Constructor de Frases)
+// 2. Minijuego: Armador Sagrado (Constructor de Frases del Diccionario)
 export const sentencePuzzleData = [
   {
     id: 1,
-    spanish: "El agua pura es nuestra vida",
-    words: ["Uni", "tsupi", "ore", "rekove"],
-    phonetic: "[u-ni tsu-pi o-re re-ko-ve]",
-    lore: "El agua ('Uni') es concebida como la madre sagrada de todos los seres.",
-    hint: "Comienza con la palabra del agua: 'Uni'"
+    spanish: "Yo quiero aprender a hablar kukama",
+    words: ["Etse", "tseta", "ikua", "kumitsa", "kukama"],
+    phonetic: "[et-se tse-ta i-kwa ku-mi-tsa ku-ka-ma]",
+    lore: "Oración tomada del Diccionario Kukama-Kukamiria (p. 214).",
+    hint: "Comienza con el pronombre femenino 'Etse' (yo)"
   },
   {
     id: 2,
-    spanish: "¿Cómo estás, querido hermano / amigo?",
-    words: ["Mai", "katu", "erua"],
-    phonetic: "[mai ka-tu e-ru-a]",
-    lore: "El saludo fraterno que une a las familias en las malocas ribereñas.",
-    hint: "La expresión de pregunta es 'Mai katu'"
+    spanish: "¿Cómo estás?",
+    words: ["Maniawatipa", "na", "yuti"],
+    phonetic: "[ma-nya-wa-ti-pa na yu-ti]",
+    lore: "Saludo frecuente del diccionario (p. 12), al que se responde 'Ni mania'.",
+    hint: "Inicia con la palabra interrogativa 'Maniawatipa'"
   },
   {
     id: 3,
-    spanish: "El jaguar camina en el bosque",
-    words: ["Yawar", "pua", "ka'a", "pe"],
-    phonetic: "[ya-war pu-a ka-a pe]",
-    lore: "'Yawar' es el señor del monte ('ka'a') que cuida los senderos.",
-    hint: "El sujeto principal es el felino 'Yawar'"
+    spanish: "El kukama es nuestra verdadera lengua",
+    words: ["Kukama", "aitsemekatun", "ini", "kumitsa"],
+    phonetic: "[ku-ka-ma ai-tse-me-ka-tun i-ni ku-mi-tsa]",
+    lore: "Oración registrada en el Diccionario Kukama-Kukamiria (p. 22).",
+    hint: "Empieza con el nombre del pueblo: 'Kukama'"
   },
   {
     id: 4,
-    spanish: "El guacamayo vuela sobre el cielo azul",
-    words: ["Arara", "weve", "yvaga", "ari"],
-    phonetic: "[a-ra-ra we-ve y-va-ga a-ri]",
-    lore: "Las plumas de 'Arara' representan los rayos del sol y la libertad.",
-    hint: "Empieza con el ave 'Arara'"
+    spanish: "Queremos aprender a escribir en kukama",
+    words: ["Ini", "tseta", "ikua", "kuatiaraka", "kukamapu"],
+    phonetic: "[i-ni tse-ta i-kwa kwa-tya-ra-ka ku-ka-ma-pu]",
+    lore: "Oración registrada en el Diccionario Kukama-Kukamiria (p. 108).",
+    hint: "Comienza con 'Ini' (nosotros inclusivo)"
   },
   {
     id: 5,
-    spanish: "Nosotros aprendemos la lengua Kukama",
-    words: ["Yaki", "ta", "ikua", "kukama"],
-    phonetic: "[ya-ki ta i-kwa ku-ka-ma]",
-    lore: "'Ikua' es el verbo de conocer y heredar la memoria viva.",
-    hint: "El pronombre 'Nosotros' es 'Yaki ta'"
+    spanish: "Yo te amo",
+    words: ["Ta", "tsachita", "ene"],
+    phonetic: "[ta tsa-chi-ta e-ne]",
+    lore: "Oración registrada en el Diccionario Kukama-Kukamiria (p. 201), usando 'ta' (yo, habla masculina).",
+    hint: "Empieza con el pronombre 'Ta'"
   }
 ];
 
@@ -641,63 +694,62 @@ export const sentencePuzzleData = [
 export const soundMysteryData = [
   {
     id: 1,
-    audioWord: "Yawar",
-    phonetic: "[ya-war]",
-    question: "¿A qué criatura o símbolo corresponde este sonido?",
+    audioWord: "Aɨmanta",
+    phonetic: "[a-ɨ-man-ta]",
+    question: "¿A qué animal del diccionario corresponde esta palabra?",
     options: [
-      { id: "yawar", name: "Otorongo / Jaguar", icon: "🐆", isCorrect: true, lore: "¡Correcto! 'Yawar' es el gran felino sagrado del bosque amazónico." },
-      { id: "wapuri", name: "Delfín Rosado", icon: "🐬", isCorrect: false },
-      { id: "arara", name: "Guacamayo Rojo", icon: "🦜", isCorrect: false },
+      { id: "aimanta", name: "Otorongo / Tigre", icon: "🐆", isCorrect: true, lore: "¡Correcto! 'Aɨmanta' (y 'yawara parawa') es el otorongo." },
+      { id: "ipirawira", name: "Bufeo Colorado", icon: "🐬", isCorrect: false },
+      { id: "arara", name: "Guacamayo", icon: "🦜", isCorrect: false },
       { id: "tapira", name: "Sachavaca / Tapir", icon: "🦛", isCorrect: false }
     ]
   },
   {
     id: 2,
-    audioWord: "Wapuri",
-    phonetic: "[wa-pu-ri]",
-    question: "¿Qué habitante legendario de las cochas acabas de escuchar?",
+    audioWord: "Ipirawira",
+    phonetic: "[i-pi-ra-wi-ra]",
+    question: "¿Qué habitante de las cochas acabas de escuchar?",
     options: [
-      { id: "warakusu", name: "Paiche Gigante", icon: "🐟", isCorrect: false },
-      { id: "wapuri", name: "Bufeo Colorado", icon: "🐬", isCorrect: true, lore: "¡Acertaste! 'Wapuri' es el espíritu guardián de las aguas de Nauta." },
-      { id: "yawati", name: "Tortuga Taricaya", icon: "🐢", isCorrect: false },
-      { id: "kai", name: "Mono Choro", icon: "🐒", isCorrect: false }
+      { id: "iwatsu", name: "Paiche (Iwatsu)", icon: "🐟", isCorrect: false },
+      { id: "ipirawira", name: "Bufeo (Ipirawira)", icon: "🐬", isCorrect: true, lore: "¡Acertaste! 'Ipirawira' es el bufeo; 'ipirawira pɨtani' es el bufeo colorado." },
+      { id: "tarikaya", name: "Taricaya (Tarikaya)", icon: "🐢", isCorrect: false },
+      { id: "arawata", name: "Mono Choro (Arawata)", icon: "🐒", isCorrect: false }
     ]
   },
   {
     id: 3,
-    audioWord: "Wepɨ",
-    phonetic: "[güép-uh]",
-    question: "¿Qué número ancestral de la cuenta Kokama ha sonado?",
+    audioWord: "Wepe",
+    phonetic: "[we-pe]",
+    question: "¿Qué número del Kukama-Kukamiria ha sonado?",
     options: [
-      { id: "motsapir", name: "Número Tres (Motsapɨr)", icon: "3️⃣", isCorrect: false },
+      { id: "mutsapirika", name: "Número Tres (Mutsapɨrɨka)", icon: "3️⃣", isCorrect: false },
       { id: "mukuika", name: "Número Dos (Mukuika)", icon: "2️⃣", isCorrect: false },
-      { id: "wepi", name: "Número Uno (Wepɨ)", icon: "1️⃣", isCorrect: true, lore: "¡Exacto! 'Wepɨ' es el primer número, con la sexta vocal 'ɨ' gutural." },
+      { id: "wepe", name: "Número Uno (Wepe)", icon: "1️⃣", isCorrect: true, lore: "¡Exacto! 'Wepe' significa uno en el diccionario oficial." },
       { id: "iruaka", name: "Número Cuatro (Iruaka)", icon: "4️⃣", isCorrect: false }
     ]
   },
   {
     id: 4,
-    audioWord: "Warakusu",
-    phonetic: "[wa-ra-ku-su]",
-    question: "¿Quién es el gigante de escamas de Pacaya Samiria?",
+    audioWord: "Iwatsu",
+    phonetic: "[i-wa-tsu]",
+    question: "¿Quién es el pez gigante de las cochas?",
     options: [
-      { id: "warakusu", name: "Paiche (Warakusu)", icon: "🐟", isCorrect: true, lore: "¡Excelente! 'Warakusu' supera los 3 metros y protege las cochas vírgenes." },
-      { id: "yawati", name: "Charapa (Yawatï)", icon: "🐢", isCorrect: false },
-      { id: "yawar", name: "Otorongo (Yawar)", icon: "🐆", isCorrect: false },
-      { id: "tukana", name: "Tucán (Tukana)", icon: "🦤", isCorrect: false }
+      { id: "iwatsu", name: "Paiche (Iwatsu)", icon: "🐟", isCorrect: true, lore: "¡Excelente! 'Iwatsu' es el nombre del paiche en Kukama-Kukamiria." },
+      { id: "tarikaya", name: "Taricaya (Tarikaya)", icon: "🐢", isCorrect: false },
+      { id: "aimanta", name: "Otorongo (Aɨmanta)", icon: "🐆", isCorrect: false },
+      { id: "piyakui", name: "Tucán (Piyakui)", icon: "🦤", isCorrect: false }
     ]
   },
   {
     id: 5,
-    audioWord: "Etepe",
-    phonetic: "[e-te-pe]",
-    question: "¿Qué expresión de saludo y encuentro resonó en el río?",
+    audioWord: "Yutsurpaki",
+    phonetic: "[yu-tsur-pa-ki]",
+    question: "¿Qué expresión de cortesía acabas de escuchar?",
     options: [
-      { id: "irapatse", name: "Muchas gracias (Irapatse)", icon: "🙏", isCorrect: false },
-      { id: "etepe", name: "Hola / Paz (Etepe)", icon: "👋", isCorrect: true, lore: "¡Bien hecho! 'Etepe' es el saludo cálido y fraterno entre hermanos ribereños." },
-      { id: "uni", name: "Agua limpia (Uni)", icon: "💧", isCorrect: false },
-      { id: "takuara", name: "Casa maloca (Takuara)", icon: "🛖", isCorrect: false }
+      { id: "yutsurpaki", name: "Gracias (Yutsurpaki)", icon: "🙏", isCorrect: true, lore: "¡Bien hecho! 'Yutsurpaki' significa gracias en Kukama-Kukamiria." },
+      { id: "tsaniuri", name: "Bienvenido (Tsaniuri)", icon: "👋", isCorrect: false },
+      { id: "uni", name: "Agua (Uni)", icon: "💧", isCorrect: false },
+      { id: "uka", name: "Casa (Uka)", icon: "🛖", isCorrect: false }
     ]
   }
 ];
-

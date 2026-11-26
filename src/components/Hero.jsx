@@ -4,15 +4,15 @@ import heroImg from '../assets/hero_amazon_river.jpg';
 
 export default function Hero({ onStartLearn, onExploreStories }) {
   const handleListenWelcome = () => {
-    sounds.speak("Etepe, mai katu! Bienvenidos a Ikua", "[e-te-pe mai ka-tu bi-en-ve-ni-dos a i-kwa]");
+    sounds.speak("Tsaniuri! Era kuemataka", "[tsa-nyu-ri e-ra kwe-ma-ta-ka]");
   };
 
   const tickerPhrases = [
-    { kokama: "Uni tsupi ore rekove", spanish: "El agua pura es nuestra vida", phonetic: "[u-ni tsu-pi o-re re-ko-ve]" },
-    { kokama: "Yawar pua ka'a pe", spanish: "El jaguar camina en el bosque", phonetic: "[ya-war pu-a ka-a pe]" },
-    { kokama: "Kukama ikua", spanish: "Sabiduría viva del pueblo", phonetic: "[ku-ka-ma i-kwa]" },
-    { kokama: "Kuarachy ohesape parana", spanish: "El sol ilumina el gran río", phonetic: "[kwa-ra-chy o-he-sa-pe pa-ra-na]" },
-    { kokama: "Irapatse tupan", spanish: "Gratitud profunda a la vida", phonetic: "[i-ra-pat-se tu-pan]" }
+    { kokama: "Etse tseta ikua kumitsa kukama", spanish: "Yo quiero aprender a hablar kukama", phonetic: "[et-se tse-ta i-kwa ku-mi-tsa ku-ka-ma]" },
+    { kokama: "Kukama aitsemekatun ini kumitsa", spanish: "El kukama es nuestra verdadera lengua", phonetic: "[ku-ka-ma ai-tse-me-ka-tun i-ni ku-mi-tsa]" },
+    { kokama: "Era kuemataka — Maniawatipa na yuti", spanish: "Buen día — ¿Cómo estás?", phonetic: "[e-ra kwe-ma-ta-ka ma-nya-wa-ti-pa na yu-ti]" },
+    { kokama: "Ini tseta ikua kuatiaraka kukamapu", spanish: "Queremos aprender a escribir en kukama", phonetic: "[i-ni tse-ta i-kwa kwa-tya-ra-ka ku-ka-ma-pu]" },
+    { kokama: "Yutsurpaki — Tsaniuri", spanish: "Gracias — Bienvenido", phonetic: "[yu-tsur-pa-ki tsa-nyu-ri]" }
   ];
 
   return (
@@ -52,7 +52,7 @@ export default function Hero({ onStartLearn, onExploreStories }) {
             >
               <span className="audio-icon">🔊</span>
               <span className="greeting-text">
-                <em>"Etepe, mai katu!"</em> (¡Hola, bienvenidos a Ikua!)
+                <em>"Tsaniuri! Era kuemataka"</em> (¡Bienvenido! Buen día)
               </span>
               <span className="greeting-tag">Escuchar</span>
             </button>
@@ -90,13 +90,13 @@ export default function Hero({ onStartLearn, onExploreStories }) {
             {/* Dynamic Interactive Card 1 */}
             <div
               className="floating-stat-card card-top"
-              onClick={() => sounds.speak("Yapana", "[ya-pa-na]")}
-              title="Toca para escuchar 'Yapana' (Canoa)"
+              onClick={() => sounds.speak("Ɨara", "[ɨ-a-ra]")}
+              title="Toca para escuchar 'Ɨara' (Canoa)"
             >
               <span className="float-icon">🛶</span>
               <div>
-                <strong className="float-title">Gente del Agua · Yapana</strong>
-                <p className="float-sub">Navegantes milenarios del río Marañón</p>
+                <strong className="float-title">Gente del Agua · Ɨara</strong>
+                <p className="float-sub">Canoa tradicional en el río Marañón</p>
               </div>
               <span className="float-audio-pill">🔊</span>
             </div>
@@ -104,13 +104,13 @@ export default function Hero({ onStartLearn, onExploreStories }) {
             {/* Dynamic Interactive Card 2 */}
             <div
               className="floating-stat-card card-bottom"
-              onClick={() => sounds.speak("Yawar", "[ya-war]")}
-              title="Toca para escuchar 'Yawar' (Jaguar)"
+              onClick={() => sounds.speak("Aɨmanta", "[a-ɨ-man-ta]")}
+              title="Toca para escuchar 'Aɨmanta' (Otorongo)"
             >
               <span className="float-icon">🐆</span>
               <div>
-                <strong className="float-title">Yawar · El Otorongo</strong>
-                <p className="float-sub">Fuerza espiritual y guardián del monte</p>
+                <strong className="float-title">Aɨmanta · El Otorongo</strong>
+                <p className="float-sub">Felino emblemático de la selva ('ɨwɨrati')</p>
               </div>
               <span className="float-audio-pill">🔊</span>
             </div>

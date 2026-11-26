@@ -16,8 +16,8 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
   let items = [];
 
   if (selectedCategoryId === 'numeros') {
-    title = 'Papachika';
-    subtitle = 'Los Números en Kokama (1 al 10)';
+    title = 'Wepe – Chunka';
+    subtitle = 'Los Números en Kukama-Kukamiria (1 al 10)';
     icon = '🔢';
     items = numbersList.map(item => ({
       id: item.number,
@@ -29,8 +29,8 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
       type: 'number'
     }));
   } else if (selectedCategoryId === 'alfabeto') {
-    title = 'Ikuashawa';
-    subtitle = 'Alfabeto y Frases Clave';
+    title = 'Kumitsa & Grafías';
+    subtitle = 'Alfabeto FORMABIAP y Saludos';
     icon = '🔤';
     items = alphabetList.map(item => ({
       id: item.letter + item.kokama,
@@ -43,8 +43,8 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
       type: 'alphabet'
     }));
   } else if (selectedCategoryId === 'animales') {
-    title = 'Miyari';
-    subtitle = 'Fauna de la Selva Peruana';
+    title = 'Fauna Amazónica';
+    subtitle = 'Animales de la Selva y el Río';
     icon = '🐆';
     items = animalsList.map(item => ({
       id: item.id,
@@ -60,8 +60,8 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
     }));
   } else {
     // Naturaleza
-    title = "Ka'a & Teta";
-    subtitle = 'Ríos, Plantas y Comunidad';
+    title = 'Ɨwɨrati & Uni';
+    subtitle = 'Naturaleza, Río y Comunidad';
     icon = '🌿';
     items = natureList.map(item => ({
       id: item.kokama,
@@ -262,7 +262,7 @@ export default function LearnDetailSection({ selectedCategoryId, onClose, onChan
             <div className="challenge-options-list">
               {[
                 currentItem.main,
-                items[(currentFlashcardIndex + 1) % items.length]?.main || 'Etepe',
+                items[(currentFlashcardIndex + 1) % items.length]?.main || 'Era kuemataka',
                 items[(currentFlashcardIndex + 2) % items.length]?.main || 'Uni'
               ]
                 .sort(() => (currentFlashcardIndex % 2 === 0 ? 0.3 : -0.3))

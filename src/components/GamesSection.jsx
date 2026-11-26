@@ -10,18 +10,18 @@ import { sounds } from '../utils/soundEngine';
 // Generador de cartas para el juego de memoria
 function generateMemoryCards() {
   const basePairs = [
-    { pairId: 1, text: "Yawar", sub: "Jaguar / Otorongo", icon: "🐆", type: "kokama" },
-    { pairId: 1, text: "Otorongo", sub: "Yawar", icon: "🐆", type: "spanish" },
-    { pairId: 2, text: "Wapuri", sub: "Bufeo Colorado", icon: "🐬", type: "kokama" },
-    { pairId: 2, text: "Bufeo Colorado", sub: "Wapuri", icon: "🐬", type: "spanish" },
-    { pairId: 3, text: "Arara", sub: "Guacamayo Rojo", icon: "🦜", type: "kokama" },
+    { pairId: 1, text: "Aɨmanta", sub: "Otorongo / Tigre", icon: "🐆", type: "kokama" },
+    { pairId: 1, text: "Otorongo", sub: "Aɨmanta", icon: "🐆", type: "spanish" },
+    { pairId: 2, text: "Ipirawira", sub: "Bufeo", icon: "🐬", type: "kokama" },
+    { pairId: 2, text: "Bufeo", sub: "Ipirawira", icon: "🐬", type: "spanish" },
+    { pairId: 3, text: "Arara", sub: "Guacamayo", icon: "🦜", type: "kokama" },
     { pairId: 3, text: "Guacamayo", sub: "Arara", icon: "🦜", type: "spanish" },
-    { pairId: 4, text: "Warakusu", sub: "Paiche Gigante", icon: "🐟", type: "kokama" },
-    { pairId: 4, text: "Paiche", sub: "Warakusu", icon: "🐟", type: "spanish" },
-    { pairId: 5, text: "Wepɨ", sub: "Número Uno", icon: "1️⃣", type: "kokama" },
-    { pairId: 5, text: "Uno", sub: "Wepɨ", icon: "1️⃣", type: "spanish" },
-    { pairId: 6, text: "Etepe", sub: "Hola / Saludo", icon: "👋", type: "kokama" },
-    { pairId: 6, text: "Hola", sub: "Etepe", icon: "👋", type: "spanish" }
+    { pairId: 4, text: "Iwatsu", sub: "Paiche", icon: "🐟", type: "kokama" },
+    { pairId: 4, text: "Paiche", sub: "Iwatsu", icon: "🐟", type: "spanish" },
+    { pairId: 5, text: "Wepe", sub: "Número Uno", icon: "1️⃣", type: "kokama" },
+    { pairId: 5, text: "Uno", sub: "Wepe", icon: "1️⃣", type: "spanish" },
+    { pairId: 6, text: "Yutsurpaki", sub: "Gracias", icon: "🙏", type: "kokama" },
+    { pairId: 6, text: "Gracias", sub: "Yutsurpaki", icon: "🙏", type: "spanish" }
   ];
 
   return [...basePairs].sort(() => Math.random() - 0.5).map((card, idx) => ({

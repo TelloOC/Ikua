@@ -17,19 +17,19 @@ export default function LanguageInfo() {
       tagline: 'Solo el 4.5% de la población étnica habla la lengua con fluidez — y casi todos son abuelos',
       statNumbers: [
         { val: '10,762', lbl: 'Personas autoidentificadas como Kukama-Kukamiria (Censo Nacional 2017 — INEI)', icon: '👥' },
-        { val: '37,053', lbl: 'Población estimada en comunidades nativas según BDPI · Ministerio de Cultura', alert: true, icon: '⚠️' },
-        { val: 'Solo abuelos', lbl: 'Tanto el BDPI como la UNESCO señalan que la lengua sobrevive principalmente en las generaciones de abuelos', icon: '👴' },
-        { val: 'En peligro', lbl: '«Seriamente en peligro» (BDPI · Ministerio de Cultura) · «En peligro de extinción» (UNESCO)', badge: 'Alerta Máxima', icon: '🚨' }
+        { val: '37,053', lbl: 'Población estimada en comunidades nativas (BDPI · Ministerio de Cultura del Perú)', alert: true, icon: '⚠️' },
+        { val: '1,185', lbl: 'Personas que aprendieron Kukama-Kukamiria como lengua materna en la infancia (Censo 2017 — INEI)', icon: '🗣️' },
+        { val: 'Seriamente en peligro', lbl: 'Clasificación oficial del Ministerio de Educación del Perú · Hablada predominantemente por adultos mayores', badge: 'MINEDU · BDPI', icon: '🚨' }
       ],
       highlights: [
-        { icon: '📉', title: 'Brecha Generacional Extrema', desc: 'Casi el 95% de los jóvenes y niños Kukama solo aprendieron castellano como primera lengua.' },
-        { icon: '⏳', title: 'Cuenta Regresiva Biológica', desc: 'Cada año fallecen abuelos sabios que eran los últimos custodios de cantos y saberes fluviales.' },
-        { icon: '📍', title: 'Concentración Vulnerable', desc: 'La mayoría de hablantes sobrevivientes residen dispersos en cuencas del Marañón, Samiria y Ucayali.' }
+        { icon: '📉', title: 'Brecha Generacional Crítica', desc: 'El castellano es el idioma cotidiano del hogar Kukama. Los niños y jóvenes crecen sin aprender la lengua ancestral, rompiendo la transmisión oral intergeneracional.' },
+        { icon: '⏳', title: 'Hablantes Fluidos: Solo Adultos Mayores', desc: 'La gran mayoría de personas con dominio fluido son ancianos. Cada fallecimiento representa la pérdida irreemplazable de cantos, saberes y vocabulario sin registro escrito.' },
+        { icon: '📍', title: 'Dispersión en Cuencas Remotas de Loreto', desc: 'Los hablantes sobrevivientes están dispersos en comunidades ribereñas de los ríos Marañón, Ucayali, Huallaga, Tigre y Urituyacu, dificultando los esfuerzos de revitalización.' }
       ],
       actionAudio: {
-        label: 'Escuchar clamor en Kokama: "Kukama i purukara"',
-        text: 'Kukama i purukara',
-        phonetic: '[ku-ka-ma i pu-ru-ka-ra]'
+        label: 'Escuchar en Kukama: "Kukama aitsemekatun ini kumitsa"',
+        text: 'Kukama aitsemekatun ini kumitsa',
+        phonetic: '[ku-ka-ma ai-tse-me-ka-tun i-ni ku-mi-tsa]'
       }
     },
     {
@@ -241,12 +241,12 @@ export default function LanguageInfo() {
                     <span>Autoidentificados</span>
                   </div>
                   <div className="stat-overlay-item alert">
-                    <strong>37,053</strong>
-                    <span>Población estimada</span>
+                    <strong>1,185</strong>
+                    <span>Hablantes Nativos</span>
                   </div>
                   <div className="stat-overlay-item">
-                    <strong>En peligro</strong>
-                    <span>UNESCO · BDPI</span>
+                    <strong>Seriamente en peligro</strong>
+                    <span>MINEDU del Perú</span>
                   </div>
                 </div>
               </div>
