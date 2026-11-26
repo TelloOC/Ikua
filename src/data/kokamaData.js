@@ -2,10 +2,10 @@
 // Loreto, Amazonía Peruana
 
 export const languageStats = [
-  { label: "Familia Lingüística", value: "Tupí-Guaraní", detail: "Una de las familias más extendidas de Sudamérica" },
-  { label: "Ubicación Principal", value: "Loreto, Perú", detail: "Ríos Marañón, Huallaga, Ucayali y Nanay" },
-  { label: "Población Étnica", value: "+30,000", detail: "Comunidades ribereñas e interculturales" },
-  { label: "Reserva Emblemática", value: "Pacaya Samiria", detail: "La 'Selva de los Espejos', territorio ancestral" }
+  { label: "Autoidentificados", value: "10,762", detail: "Según el Censo Nacional 2017 — INEI" },
+  { label: "Población Estimada", value: "37,053", detail: "En comunidades nativas según BDPI · Ministerio de Cultura" },
+  { label: "Transmisión Activa", value: "Solo abuelos", detail: "UNESCO y BDPI: lengua viva principalmente en la tercera generación" },
+  { label: "Estado de Riesgo", value: "En peligro", detail: "«Seriamente en peligro» (BDPI) · «En peligro de extinción» (UNESCO)" }
 ];
 
 export const categoriesData = [
