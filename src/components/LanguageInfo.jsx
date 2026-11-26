@@ -14,12 +14,12 @@ export default function LanguageInfo() {
       title: 'La Realidad en Cifras: Una Lengua en Alerta Crítica',
       subtitle: 'Censo Nacional 2017 & Base de Datos de Pueblos Indígenas (BDPI - Perú)',
       image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1000&q=80',
-      tagline: 'Apenas el 4.5% de la población étnica habla con fluidez la lengua materna',
+      tagline: 'Solo el 4.5% de la población étnica habla la lengua con fluidez — y casi todos son abuelos',
       statNumbers: [
-        { val: '30,735', lbl: 'Población que se autoidentifica como pueblo Kukama en Perú (INEI 2017)', icon: '👥' },
-        { val: '~1,400', lbl: 'Hablantes nativos reales con fluidez (menos del 5% del total étnico)', alert: true, icon: '⚠️' },
-        { val: '>85%', lbl: 'De los hablantes fluidos son ancianos sabios mayores de 60 años', icon: '👴' },
-        { val: 'Crítico', lbl: 'Estado de vitalidad lingüística catalogado por la UNESCO', badge: 'En Peligro Severo', icon: '🚨' }
+        { val: '10,762', lbl: 'Personas autoidentificadas como Kukama-Kukamiria (Censo Nacional 2017 — INEI)', icon: '👥' },
+        { val: '37,053', lbl: 'Población estimada en comunidades nativas según BDPI · Ministerio de Cultura', alert: true, icon: '⚠️' },
+        { val: 'Solo abuelos', lbl: 'Tanto el BDPI como la UNESCO señalan que la lengua sobrevive principalmente en las generaciones de abuelos', icon: '👴' },
+        { val: 'En peligro', lbl: '«Seriamente en peligro» (BDPI · Ministerio de Cultura) · «En peligro de extinción» (UNESCO)', badge: 'Alerta Máxima', icon: '🚨' }
       ],
       highlights: [
         { icon: '📉', title: 'Brecha Generacional Extrema', desc: 'Casi el 95% de los jóvenes y niños Kukama solo aprendieron castellano como primera lengua.' },
@@ -237,16 +237,16 @@ export default function LanguageInfo() {
                 <span className="stat-overlay-title">📊 Diagnóstico Lingüístico (Loreto):</span>
                 <div className="stat-overlay-grid">
                   <div className="stat-overlay-item">
-                    <strong>30,735</strong>
-                    <span>Población Étnica</span>
+                    <strong>10,762</strong>
+                    <span>Autoidentificados</span>
                   </div>
                   <div className="stat-overlay-item alert">
-                    <strong>~1,400</strong>
-                    <span>Hablantes Activos</span>
+                    <strong>37,053</strong>
+                    <span>Población estimada</span>
                   </div>
                   <div className="stat-overlay-item">
-                    <strong>+85%</strong>
-                    <span>Mayores de 60 años</span>
+                    <strong>En peligro</strong>
+                    <span>UNESCO · BDPI</span>
                   </div>
                 </div>
               </div>
