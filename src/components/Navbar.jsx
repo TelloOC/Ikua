@@ -63,64 +63,20 @@ export default function Navbar({ activeSection, onNavigate }) {
 
         {/* Desktop Navigation Links */}
         <nav className="desktop-nav">
-          <button 
-            className={`nav-link ${activeSection === 'inicio' ? 'active' : ''}`}
-            onClick={() => handleNavClick('inicio')}
-          >
-            Inicio
-          </button>
-          <button 
-            className={`nav-link ${activeSection === 'lengua' ? 'active' : ''}`}
-            onClick={() => handleNavClick('lengua')}
-          >
-            Estadísticas & Realidad
-          </button>
-          <button 
-            className={`nav-link ${activeSection === 'aprender' ? 'active' : ''}`}
-            onClick={() => handleNavClick('aprender')}
-          >
-            Aprender
-          </button>
-          <button 
-            className={`nav-link ${activeSection === 'cuentos' ? 'active' : ''}`}
-            onClick={() => handleNavClick('cuentos')}
-          >
-            Cuentos & Mitos
-          </button>
-          <button 
-            className={`nav-link ${activeSection === 'juegos' ? 'active' : ''}`}
-            onClick={() => handleNavClick('juegos')}
-          >
-            Juegos
-          </button>
-          <button 
-            className={`nav-link ${activeSection === 'cultura' ? 'active' : ''}`}
-            onClick={() => handleNavClick('cultura')}
-          >
-            Cultura
-          </button>
-          <button 
-            className={`nav-link ${activeSection === 'contacto' ? 'active' : ''}`}
-            onClick={() => handleNavClick('contacto')}
-          >
-            Contacto
-          </button>
+          {/* Solo botón principal CTA */}
         </nav>
 
-        {/* Ambient Nature Sound Action & Mobile Button */}
+        {/* Solo botón Comenzar a aprender + Hamburger móvil */}
         <div className="nav-actions">
-          <button 
-            className={`ambient-sound-btn ${ambientActive ? 'playing' : ''}`}
-            onClick={handleAmbientToggle}
-            title={ambientActive ? "Silenciar sonido ambiental de la selva" : "Activar sonido ambiental de la selva (río Marañón)"}
-            aria-label="Sonido ambiental de la selva"
+          <button
+            className="btn-primary-amazon nav-cta-btn"
+            onClick={() => handleNavClick('aprender')}
+            title="Ir a los módulos de aprendizaje Kokama"
           >
-            <span className="ambient-icon">{ambientActive ? '🌊' : '🍃'}</span>
-            <span className="ambient-label">{ambientActive ? 'Río Activo' : 'Sonido Selva'}</span>
-            {ambientActive && <span className="sound-pulse"></span>}
+            <span>🌿 Comenzar a aprender</span>
           </button>
 
-          {/* Hamburger button */}
+          {/* Hamburger button (móvil) */}
           <button 
             className="mobile-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
