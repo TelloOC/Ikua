@@ -73,15 +73,6 @@ export default function Hero({ onStartLearn, onExploreStories }) {
               </svg>
             </button>
 
-            <button
-              className="btn-secondary-amazon"
-              onClick={() => {
-                sounds.playWoodClick();
-                onExploreStories();
-              }}
-            >
-              <span>📖 Cuentos y Mitos</span>
-            </button>
           </div>
         </div>
 
