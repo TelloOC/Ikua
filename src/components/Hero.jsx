@@ -1,5 +1,6 @@
 import { sounds } from '../utils/soundEngine';
 import { languageStats } from '../data/kokamaData';
+import heroImg from '../assets/hero_amazon_river.jpg';
 
 export default function Hero({ onStartLearn, onExploreStories }) {
   const handleListenWelcome = () => {
@@ -88,8 +89,8 @@ export default function Hero({ onStartLearn, onExploreStories }) {
         <div className="hero-visual">
           <div className="hero-image-frame">
             <img
-              src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80"
-              alt="Río serpenteante en la selva amazónica de Loreto"
+              src={heroImg}
+              alt="Vista aérea del río serpenteante en la selva amazónica peruana"
               className="hero-main-img"
               loading="eager"
             />
